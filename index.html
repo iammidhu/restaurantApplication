@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular app</title>
+    <script src="lib/lodash.core.js" charset="utf-8"></script>
+    <script src="lib/angular.min.js" charset="utf-8"></script>
+    <script src="lib/angular-route.min.js" charset="utf-8"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+    <script src="lib/angular-google-maps.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/controller.js" charset="utf-8"></script>
+    <script src="js/services.js" charset="utf-8"></script>
+    <base href="/" />
+    <style media="screen">
+        #gmaps {
+            width: 450px;
+            height: 450px;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+    <div ng-view></div>
+</body>
+</html>
