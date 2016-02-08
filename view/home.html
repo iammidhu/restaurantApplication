@@ -6,13 +6,15 @@
     <div class="resultContainer">
         <div class="search-result-list">
             <ul>
-
+                <li ng-repeat="data in resultList">
+                    {{data.title}}
+                    {{data.desc}}
+                    {{data.phoneNo}}
+                </li>
             </ul>
         </div>
         <div class="search-result-map">
-            <div>
-                <div id="map_canvas"></div>
-            </div>
+            <div id="map_canvas"></div>
         </div>
     </div>
 </div>

@@ -1,45 +1,30 @@
-myApp.factory('mapUtils', function() {
-    return {
-        initMap: function() {
-            if (map === void 0) {
-                map = new google.maps.Map(element[0], mapOptions);
-            }
-        },
+myApp.factory('searchQuery',['$http', function($http) {
+    var search = function(data) {
+        var config = {
+            url: 'list/list.json',
+            method: 'GET'
+        };
 
-        // place a marker
-        setMarker: function(map, position, title, content) {
-            var marker;
-            var markerOptions = {
-                position: position,
-                map: map,
-                title: title,
-                icon: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
-            };
+        var list,
+            searchResult = [];
 
-            marker = new google.maps.Marker(markerOptions);
-            markers.push(marker); // add marker to array
-
-            google.maps.event.addListener(marker, 'click', function() {
-                // close window if not undefined
-                if (infoWindow !== void 0) {
-                    infoWindow.close();
+        $http(config).then(function(response) {
+            list = response.data;
+            for(i=0 ; i < list.length ; i++) {
+                if(list[i].indexOf(data) > -1) {
+                    searchResult.push(list[i]);
                 }
-                // create new window
-                var infoWindowOptions = {
-                    content: content
-                };
-                infoWindow = new google.maps.InfoWindow(infoWindowOptions);
-                infoWindow.open(map, marker);
-            });
-        }
-    }
-});
+            }
+        }, function() {
+            console.log('Error occured when getting json file');
+        });
 
 
 
 
-myApp.factory('submitData',function() {
-    return function(data,scope) {
-        scope.datas.push(data);
-    }
-});
+        return searchResult;
+
+    };
+
+    return search;
+}]);
