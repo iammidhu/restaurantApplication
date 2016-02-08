@@ -2,11 +2,11 @@ var myApp = angular.module('myApp',['ngRoute']);
 
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
-        when('/home', {
+        when('/', {
             templateUrl: 'view/home.html',
             controller: 'homeController'
         }).
-        when('/', {
+        when('/result', {
             templateUrl: 'view/result.html',
             controller: 'resultController'
         }).
