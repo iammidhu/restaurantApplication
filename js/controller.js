@@ -38,19 +38,23 @@ myApp.controller('homeController', ['$scope', 'searchQuery', 'createMarker', 'sh
         });
     };
 
-    $scope.nextScreen = function(id) {
+    $scope.nextScreen = function(data) {
         var next = sharedData();
-        next.set(id);
+        next.set(data);
         $location.path = '/result';
     }
     //
 }]);
 
-myApp.controller('resultController', ['$scope', 'sharedData', function($scope, sharedData) {
+myApp.controller('resultController', ['$scope', 'sharedData', 'getMenuList', function($scope, sharedData, getMenuList) {
     var next = sharedData();
     var id = next.get();
     //get menu json via http passing the id.
-    //get about json via http passing the id.
+    var jsonRequest = getMenuList(data.id);
+    jsonRequest.then(function(response) {
+        $scope.menuList = response;
+        console.log($scope.menuList);
+    });
     //two tabs: info tab and the menu tab.
     //info tab displays all the info about the restaurant.
     //the menu tab lists the menu items with a checkbox.

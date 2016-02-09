@@ -17,7 +17,7 @@ myApp.factory('searchQuery', ['$http', function($http) {
             }
             return searchResult;
         }, function() {
-            console.log('Error occured when getting json file');
+            console.log('Error occured when getting list json file');
         });
     };
 
@@ -60,4 +60,30 @@ myApp.factory('sharedData', function() {
         get : get,
         set : set
     }
+});
+
+myApp.factory('getMenuList', function() {
+    
+    var config = {
+        url: 'list/menu.json',
+        method: 'GET'
+    };
+
+    var list,
+        searchResult = [];
+    var getMenuList = function(id) {
+        return $http(config).then(function(response) {
+            list = response.data;
+            for (i = 0; i < list.length; i++) {
+                if (list[i].id == id) {
+                    searchResult = list[i].menu;
+                }
+            }
+            return searchResult;
+        }, function() {
+            console.log('Error occured when getting menu json file');
+        });
+    };
+
+    return getMenuList;
 });
