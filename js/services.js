@@ -19,9 +19,6 @@ myApp.factory('searchQuery',['$http', function($http) {
             console.log('Error occured when getting json file');
         });
 
-
-
-
         return searchResult;
 
     };
