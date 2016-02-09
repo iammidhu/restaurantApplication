@@ -1,4 +1,4 @@
-app.factory('searchQuery', function() {
+myApp.factory('searchQuery',['$http' function($http) {
     var search = function(data) {
         var config = {
             url: 'json/list.json',
@@ -16,7 +16,7 @@ app.factory('searchQuery', function() {
 
         list = JSON.parse(list);
         for(i=0 ; i < list.length ; i++) {
-            if(list[i].indexOf(data) > -1) {
+            if(list[i].toLowerCase().indexOf(data.toLowerCase()) > -1) {
                 searchResult.push(list[i]);
             }
         }
@@ -26,4 +26,4 @@ app.factory('searchQuery', function() {
     };
 
     return search;
-});
+}]);

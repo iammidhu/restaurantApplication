@@ -1,4 +1,4 @@
-myApp.controller('homeController', ['$scope', function($scope) {
+myApp.controller('homeController', ['$scope', 'searchQuery', function($scope, searchQuery) {
     var mapOptions = {
         zoom: 10,
         center: new google.maps.LatLng(25, 80),
@@ -9,10 +9,12 @@ myApp.controller('homeController', ['$scope', function($scope) {
     $resultList = [];
     $scope.submit = function(data) {
         $resultList = searchQuery(data);
+        for (i = 0; i < $resultList.length; i++) {
+            createMarker($resultList[i]);
+        }
     }
 
     var createMarker = function(info) {
-
         var marker = new google.maps.Marker({
             map: $scope.map,
             position: new google.maps.LatLng(info.lat, info.long),
@@ -28,11 +30,6 @@ myApp.controller('homeController', ['$scope', function($scope) {
         $scope.markers.push(marker);
 
     }
-
-    for (i = 0; i < $resultList.length; i++) {
-        createMarker($resultList[i]);
-    }
-
 }]);
 
 myApp.controller('resultController', ['$scope', function($scope) {
