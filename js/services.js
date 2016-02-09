@@ -11,7 +11,7 @@ myApp.factory('searchQuery', ['$http', function($http) {
         return $http(config).then(function(response) {
             list = response.data;
             for (i = 0; i < list.length; i++) {
-                if (list[i].title.indexOf(data) > -1) {
+                if (list[i].title.toLowerCase().indexOf(data.toLowerCase()) > -1) {
                     searchResult.push(list[i]);
                 }
             }
@@ -32,7 +32,7 @@ myApp.factory('createMarker', function() {
             position: new google.maps.LatLng(info.lat, info.long),
             title: info.title
         });
-        var content = '<div></div><div class="infoWindowContent">' + info.desc +info.title+ '</div>';
+        var content = '<div class="info"><div class="contentHeading">' +info.title +'</div><hr><div class="infoWindowContent">'+ info.desc + '</div></div>';
         var infoWindow = new google.maps.InfoWindow({
             content: content
         });
