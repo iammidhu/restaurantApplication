@@ -1,15 +1,20 @@
 <div ng-controller="homeController">
     <div class="searchContainer">
-        <input type="text" ng-model="searchModel" placeholder="eg: sample restaurant">
-        <input type="button" value="Search" ng-click="submit(searchModel)">
+        <input type="text" class="search" ng-model="searchModel" placeholder="eg: sample restaurant">
+        <input type="button" class="sButton" value="Search" ng-click="submit(searchModel)">
     </div>
     <div class="resultContainer">
         <div class="search-result-list">
+            <div class="error">{{errorMsg}}</div>
             <ul>
                 <li ng-repeat="data in resultList">
-                    {{data.title}}
-                    {{data.desc}}
+                    <h2 class="hotelTitle"><a href="#">{{data.title}}</a></h2>
+                    <p class="description">
+                      {{data.desc}}
+                    </p>
+                    <p>
                     {{data.phoneNo}}
+                    </p>
                 </li>
             </ul>
         </div>
