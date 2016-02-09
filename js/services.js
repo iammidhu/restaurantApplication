@@ -11,7 +11,7 @@ myApp.factory('searchQuery', ['$http', function($http) {
         return $http(config).then(function(response) {
             list = response.data;
             for (i = 0; i < list.length; i++) {
-                if (list[i].title.indexOf(data) > -1) {
+                if (list[i].title.toLowerCase().indexOf(data.toLowerCase()) > -1) {
                     searchResult.push(list[i]);
                 }
             }
@@ -44,4 +44,20 @@ myApp.factory('createMarker', function() {
     };
 
     return createMarker;
+});
+
+
+myApp.factory('sharedData', function() {
+    var sharedData = {};
+    var get = function() {
+        return sharedData;
+    };
+    var set = function(data) {
+        sharedData = data;
+    };
+
+    return {
+        get : get,
+        set : set
+    }
 });

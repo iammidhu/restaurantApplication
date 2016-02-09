@@ -5,6 +5,7 @@
     </div>
     <div class="resultContainer">
         <div class="search-result-list">
+            <div class="error">{{errorMsg}}</div>
             <ul>
                 <li ng-repeat="data in resultList">
                     <h2 class="hotelTitle"><a href="/result">{{data.title}}</a></h2>
