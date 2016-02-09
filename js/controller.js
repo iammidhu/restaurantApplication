@@ -38,17 +38,18 @@ myApp.controller('homeController', ['$scope', 'searchQuery', 'createMarker', 'sh
         });
     };
 
-    $scope.nextScreen = function(id) {
-        var next = sharedData();
-        next.set(id);
-        $location.path = '/result';
+    $scope.nextScreen = function(data) {
+        var next = sharedData;
+        next.set(data);
     }
-    //
 }]);
 
 myApp.controller('resultController', ['$scope', 'sharedData', function($scope, sharedData) {
-    var next = sharedData();
-    var id = next.get();
+    var next = sharedData;
+    var data = next.get();
+    console.log(data);
+    $scope.data=data;
+    $scope.page = "menu";
     //get menu json via http passing the id.
     //get about json via http passing the id.
     //two tabs: info tab and the menu tab.

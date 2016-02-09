@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 #map_canvas {
-    height: 600px;
-    width: 600px;
+    height: 44vw;
+    width: 100%;
 }
 .search-result-list {
     width: 45%;
@@ -13,8 +13,6 @@
 .resultContainer {
     display: flex;
     flex-direction: row;
-    /*padding: 10px 10px 10px 10px;*/
-    border: 1px thin yellow;
     font-family: 'Montserrat', sans-serif;
 }
 .search-result-list ul{
@@ -31,7 +29,7 @@
 }
 .search-result-map {
     width: 45%;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 .searchContainer {
     text-align: center;
@@ -63,11 +61,11 @@
     list-style: none;
     padding: 10px;
 }
-ul li:nth-child(2n) {
+.search-result-list ul li:nth-child(2n) {
   background-color: #E6E6DC;
   color: black;
 }
-ul li:nth-child(2n+1) {
+.search-result-list ul li:nth-child(2n+1) {
 
   color: #591D1C;
 }
@@ -115,4 +113,61 @@ ul li{
     color: red;
     font-size: 20px;
     text-align: center;
+}
+.description{
+  font-size: 14px;
+}
+.header{
+  font-size: 3em;
+  color: red;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #E6E2AF;
+  padding: 20px 0px;
+  width: 100%;
+}
+.resBody{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+}
+.menu-info{
+  width: 80%;
+
+}
+.review{
+  width: 20%;
+
+}
+.switch-header{
+  width: 100%;
+
+}
+.switch-header ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 0px;
+  padding: 0;
+}
+.switch-header ul li{
+  width: 49%;
+  padding: 20px 0px;
+  background-color: #EAE8E3;
+  text-align: center;
+}
+.switch-header ul li:first-child{
+  margin-right: 2%;
+}
+.switch-header ul li:hover {
+  cursor: pointer;
+}
+.switch-menu{
+  width: 100%;
+}
+.switch-info{
+  width: 100%;
 }
