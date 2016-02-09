@@ -7,9 +7,13 @@
         <div class="search-result-list">
             <ul>
                 <li ng-repeat="data in resultList">
-                    {{data.title}}
-                    {{data.desc}}
+                    <h1><a href="#">{{data.title}}</a></h1>
+                    <p>
+                      {{data.desc}}
+                    </p>
+                    <p>
                     {{data.phoneNo}}
+                    </p>
                 </li>
             </ul>
         </div>

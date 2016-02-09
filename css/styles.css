@@ -40,3 +40,11 @@
 .search-result-list ul {
     list-style: none;
 }
+ul li:nth-child(2n) {
+  background-color: #00628B;
+  color: #34495e;
+}
+ul li:nth-child(2n+1) {
+  background-color: #81A594;
+  color: #ccc;
+}
