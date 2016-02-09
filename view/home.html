@@ -1,14 +1,14 @@
 <div ng-controller="homeController">
     <div class="searchContainer">
         <input type="text" class="search" ng-model="searchModel" placeholder="eg: sample restaurant">
-        <input type="button" class="button" value="Search" ng-click="submit(searchModel)">
+        <input type="button" class="sButton" value="Search" ng-click="submit(searchModel)">
     </div>
     <div class="resultContainer">
         <div class="search-result-list">
             <ul>
                 <li ng-repeat="data in resultList">
-                    <h1><a href="#">{{data.title}}</a></h1>
-                    <p>
+                    <h2 class="hotelTitle"><a href="#">{{data.title}}</a></h2>
+                    <p class="description">
                       {{data.desc}}
                     </p>
                     <p>

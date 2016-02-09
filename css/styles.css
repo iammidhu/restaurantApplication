@@ -1,6 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 #map_canvas {
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 600px;
 }
 .search-result-list {
     width: 45%;
@@ -10,41 +11,65 @@
 .resultContainer {
     display: flex;
     flex-direction: row;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
 }
-
+.resultContainer li{
+  padding: 10px 10px 10px 10px;
+  box-shadow: 3px 4px 5px 0px rgba(190, 190, 190, 0.75);
+}
 .search-result-map {
     width: 45%;
+    margin-top: 25px;
 }
 .searchContainer {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.searchContainer input[type='text'] {
+.search {
     padding: 10px;
     font-size: 13px;
+    width: 30%;
 }
 
-.searchContainer input[type='text']:focus {
-    outline: none;
+.search:focus{
+    border: 1px solid yellow;
 }
-.searchContainer input[type='button'] {
-    padding: 12px;
-    border: none;
+.sButton {
+    padding: 10px;
+  	background-color:#E4B15B;
+  	color:#591D1C;
+  	font-size:15px;
+  	padding:10px 20px;
+  	text-decoration:none;
 }
-
-.searchContainer input[type='button']:focus {
+.sButton:focus {
     outline: none;
 }
 
 .search-result-list ul {
     list-style: none;
+    padding: 10px;
 }
 ul li:nth-child(2n) {
-  background-color: #00628B;
-  color: #34495e;
+  background-color: #E6E6DC;
+  color: black;
 }
 ul li:nth-child(2n+1) {
-  background-color: #81A594;
-  color: #ccc;
+
+  color: #591D1C;
+}
+.resultContainer a{
+  text-decoration: none;
+}
+.hotelTitle a{
+  color: #5499BF;
+  text-transform: uppercase;
+}
+ul li{
+  margin-bottom: 20px;
+}
+.description{
+  color: #000;
 }
