@@ -12,8 +12,6 @@
 .resultContainer {
     display: flex;
     flex-direction: row;
-    padding: 10px 10px 10px 10px;
-    border: 1px thin yellow;
     font-family: 'Montserrat', sans-serif;
 }
 .search-result-list ul{
@@ -29,7 +27,7 @@
 }
 .search-result-map {
     width: 45%;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 .searchContainer {
     text-align: center;
