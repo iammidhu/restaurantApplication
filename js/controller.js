@@ -1,40 +1,25 @@
-myApp.controller('homeController', ['$scope', 'searchQuery', function($scope, searchQuery) {
+myApp.controller('homeController', ['$scope', 'searchQuery', 'createMarker', function($scope, searchQuery, createMarker) {
 
     var mapOptions = {
-        zoom: 10,
+        zoom: 17,
         center: new google.maps.LatLng(25, 80),
         mapTypeId: google.maps.MapTypeId.TERRAIN
     };
-    $scope.map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
     $scope.markers = [];
     $resultList = [];
     $scope.submit = function(data) {
-        $scope.resultList = searchQuery(data);
-        for (i = 0; i < $scope.resultList.length; i++) {
-            createMarker($scope.resultList[i]);
-        }
-    }
-
-    var createMarker = function(info) {
-
-        var marker = new google.maps.Marker({
-            map: $scope.map,
-            position: new google.maps.LatLng(info.lat, info.long),
-            title: info.city
-        });
-        marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
-
-        google.maps.event.addListener(marker, 'click', function() {
-            infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
-            infoWindow.open($scope.map, marker);
+        dataPromise = searchQuery(data);
+        dataPromise.then(function(result) {
+            $scope.map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+            $scope.resultList = result;
+            for (i = 0; i < $scope.resultList.length; i++) {
+                createMarker($scope.resultList[i], $scope);
+            }
+            var center = new google.maps.LatLng(result[0].lat, result[0].long);
+            $scope.map.setCenter(center);
         });
 
-        $scope.markers.push(marker);
-
     }
-
-
-
 }]);
 
 myApp.controller('resultController', ['$scope', function($scope) {
