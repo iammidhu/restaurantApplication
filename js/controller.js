@@ -47,7 +47,6 @@ myApp.controller('homeController', ['$scope', 'searchQuery', 'createMarker', 'sh
 myApp.controller('resultController', ['$scope', 'sharedData', function($scope, sharedData) {
     var next = sharedData;
     var data = next.get();
-    console.log(data);
     $scope.data=data;
     $scope.page = "menu";
     //get menu json via http passing the id.
