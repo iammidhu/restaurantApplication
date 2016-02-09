@@ -32,7 +32,7 @@ myApp.factory('createMarker', function() {
             position: new google.maps.LatLng(info.lat, info.long),
             title: info.title
         });
-        var content = '<div class="infoWindowContent">' + info.desc + '</div>';
+        var content = '<div class="info"><div class="contentHeading">' +info.title +'</div><hr><div class="infoWindowContent">'+ info.desc + '</div></div>';
         var infoWindow = new google.maps.InfoWindow({
             content: content
         });
