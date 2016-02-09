@@ -40,3 +40,9 @@
 .search-result-list ul {
     list-style: none;
 }
+
+.error {
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}

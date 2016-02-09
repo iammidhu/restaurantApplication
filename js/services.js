@@ -32,7 +32,7 @@ myApp.factory('createMarker', function() {
             position: new google.maps.LatLng(info.lat, info.long),
             title: info.title
         });
-        var content = '<div class="infoWindowContent">' + info.desc + '</div>';
+        var content = '<div></div><div class="infoWindowContent">' + info.desc +info.title+ '</div>';
         var infoWindow = new google.maps.InfoWindow({
             content: content
         });
@@ -44,4 +44,20 @@ myApp.factory('createMarker', function() {
     };
 
     return createMarker;
+});
+
+
+myApp.factory('sharedData', function() {
+    var sharedData = {};
+    var get = function() {
+        return sharedData;
+    };
+    var set = function(data) {
+        sharedData = data;
+    };
+
+    return {
+        get : get,
+        set : set
+    }
 });

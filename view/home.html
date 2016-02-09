@@ -5,11 +5,10 @@
     </div>
     <div class="resultContainer">
         <div class="search-result-list">
+            <div class="error">{{errorMsg}}</div>
             <ul>
                 <li ng-repeat="data in resultList">
-                    {{data.title}}
-                    {{data.desc}}
-                    {{data.phoneNo}}
+                    
                 </li>
             </ul>
         </div>
