@@ -1,0 +1,55 @@
+[{
+  "id": "1",
+  "title": "Le arabia",
+  "lat": "8.563462",
+  "long": "76.875657",
+  "desc": "Near Syndicate Bank, Salem - Kochi - Kanyakumari Hwy, Kazhakkoottam, Thiruvananthapuram, Kerala 695582",
+  "phoneNo": "0471 605 7777",
+  "working": "12-11.30pm"
+},
+{
+  "id": "2",
+  "title": "Al saj",
+  "lat": "8.575558",
+  "long": "76.867996",
+  "desc": "NH47, Kazhakkoottam, Thiruvananthapuram, Kerala 695582",
+  "phoneNo": "0471 241 8420",
+  "working": "12-11.30pm"
+},
+{
+  "id": "3",
+  "title": "Subway",
+  "lat": "8.558236",
+  "long": "76.876865",
+  "desc": "Technopark Campus, Kazhakkoottam, Kerala 695581",
+  "phoneNo": "0471 241 8420",
+  "working": "10-5.30pm"
+},
+{
+  "id": "4",
+  "title": "Ginger",
+  "lat": "8.561274",
+  "long": "76.876498",
+  "desc": "Electronics Technology Park, Next to House, Kazakuttom, Technopark Club, Technopark Campus, Thiruvananthapuram, Kerala 695581",
+  "phoneNo": "0471 666 3333",
+  "working": "12-11.30pm"
+},
+{
+  "id": "5",
+  "title": "B6 Inn",
+  "lat": "8.556666",
+  "long": "76.876153",
+  "desc": "NH 47 Bypass Rd, Thiruvananthapuram, Kerala 695582",
+  "phoneNo": "0471 666 3333",
+  "working": "24 hours"
+},
+{
+  "id": "6",
+  "title": "Bigway Restaurant",
+  "lat": "8.551208",
+  "long": "76.877595",
+  "desc": "Thiruvananthapuram, Kerala, bigwayrestaurant.com",
+  "phoneNo": "0471 401 0666",
+  "working": "11:30AM–11PM"
+}
+]

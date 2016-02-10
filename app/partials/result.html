@@ -1,0 +1,50 @@
+  <div class="header">
+    {{ data.title }}
+  </div>
+  <div class="resBody">
+    <div class="menu-info">
+      <div class="switch-header">
+        <ul>
+          <li ng-click="page='menu'">Menu</li>
+          <li ng-click="page='info'">Info</li>
+        </ul>
+      </div>
+      <div ng-switch on="page">
+        <div ng-switch-when="menu" class="switch-menu">
+            <ul>
+              <li ng-repeat="data in menuList">
+                <ul>
+
+                </ul>
+                {{ data.name }} {{ data.price}}
+              </li>
+            </ul>
+        </div>
+        <div ng-switch-when="info" class="switch-info">
+          <h2>{{ data.title }} Restaurant info</h2>
+          <div class="rinfo">
+            <div class="address">
+              <h3>
+                Address
+              </h3>
+              <p>
+                  {{ data.desc }}
+              </p>
+              <p>
+                {{ data.phoneNo }}
+              </p>
+            </div>
+            <div class="work">
+              <h3>Working hours</h3>
+              <p>
+              {{ data.working }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="review">
+      <h3>Your Order</h3>
+    </div>
+  </div>
