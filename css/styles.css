@@ -119,11 +119,11 @@ ul li{
 }
 .header{
   font-size: 3em;
-  color: red;
+  color: #292929;
   text-align: center;
   margin-left: 0;
   margin-right: 0;
-  background-color: #E6E2AF;
+  background-color: #29D9C2;
   padding: 20px 0px;
   width: 100%;
 }
@@ -139,7 +139,9 @@ ul li{
 }
 .review{
   width: 20%;
-
+  height: 350px;
+  border: 1px solid yellowgreen;
+  padding-left: 2%;
 }
 .switch-header{
   width: 100%;
@@ -154,9 +156,9 @@ ul li{
   padding: 0;
 }
 .switch-header ul li{
-  width: 49%;
+  width: 47%;
   padding: 20px 0px;
-  background-color: #EAE8E3;
+  background-color: #FFFFA6;
   text-align: center;
 }
 .switch-header ul li:first-child{
@@ -167,7 +169,29 @@ ul li{
 }
 .switch-menu{
   width: 100%;
+  padding-left: 20px;
+}
+.switch-menu ul{
+  list-style: none;
 }
 .switch-info{
   width: 100%;
+}
+.rinfo{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.address{
+  padding: 20px 20px 20px 20px;
+  width: 65%;
+  display: inline-block;
+}
+.address p{
+  word-break: break-all;
+}
+.work{
+  padding: 20px 20px 20px 20px;
+  display: inline-block;
+  width: 30%;
 }

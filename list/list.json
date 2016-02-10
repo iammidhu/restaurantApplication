@@ -13,7 +13,8 @@
   "lat": "8.575558",
   "long": "76.867996",
   "desc": "NH47, Kazhakkoottam, Thiruvananthapuram, Kerala 695582",
-  "phoneNo": "0471 241 8420"
+  "phoneNo": "0471 241 8420",
+  "working": "12-11.30pm"
 },
 {
   "id": "3",
@@ -21,7 +22,8 @@
   "lat": "8.558236",
   "long": "76.876865",
   "desc": "Technopark Campus, Kazhakkoottam, Kerala 695581",
-  "phoneNo": ""
+  "phoneNo": "0471 241 8420",
+  "working": "10-5.30pm"
 },
 {
   "id": "4",
@@ -29,7 +31,8 @@
   "lat": "8.561274",
   "long": "76.876498",
   "desc": "Electronics Technology Park, Next to House, Kazakuttom, Technopark Club, Technopark Campus, Thiruvananthapuram, Kerala 695581",
-  "phoneNo": "0471 666 3333"
+  "phoneNo": "0471 666 3333",
+  "working": "12-11.30pm"
 },
 {
   "id": "5",
@@ -38,7 +41,7 @@
   "long": "76.876153",
   "desc": "NH 47 Bypass Rd, Thiruvananthapuram, Kerala 695582",
   "phoneNo": "0471 666 3333",
-  "working": "24 hours  "
+  "working": "24 hours"
 },
 {
   "id": "6",
