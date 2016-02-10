@@ -1,13 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 #map_canvas {
-    height: 44vw;
+    height: 66vh;
     width: 100%;
+}
+body{
+  padding: 0;
+  margin: 0;
+  /*overflow: hidden;*/
+}
+.mainHeading{
+  background-color: #DF5A49;
+  text-align: left;
+  padding: 1%;
+  height: 9%;
+}
+.mainHeading h1{
+  font-family: 'Montserrat', sans-serif;
+  color: #16193B;
+  text-shadow: 13px 10px 11px;
 }
 .search-result-list {
     width: 45%;
     margin-right: 5%;
-    margin-top: 8px;
+    /*margn-top: 8px;*/
 }
 
 .resultContainer {
@@ -29,26 +45,30 @@
 }
 .search-result-map {
     width: 45%;
-    margin-top: 30px;
+    margin-top: 18px;
 }
 .searchContainer {
     text-align: center;
     /*margin-bottom: 30px;*/
+    padding-top: 10px;
 }
 
 .search {
     padding: 10px;
     font-size: 13px;
     width: 30%;
+    outline: none;
 }
 
 .search:focus{
     border: 1px solid yellow;
+    outline: none;
 }
 .sButton {
-    padding: 10px;
-  	background-color:#E4B15B;
-  	color:#591D1C;
+    display: inline-block;
+    font-family: fantasy;
+  	background-color:#00B279;
+  	color:red;
   	font-size:15px;
   	padding:10px 20px;
   	text-decoration:none;
@@ -111,14 +131,15 @@ ul li{
 
 .error {
     color: red;
-    font-size: 20px;
+    margin-top: 2%;
+    font-size: 30px;
     text-align: center;
 }
 .description{
   font-size: 14px;
 }
 .header{
-  font-size: 3em;
+  font-size: 2em;
   color: #292929;
   text-align: center;
   margin-left: 0;
@@ -131,7 +152,7 @@ ul li{
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-top: 2%;
+  /*margin-top: 2%;*/
 }
 .menu-info{
   width: 80%;
@@ -140,7 +161,6 @@ ul li{
 .review{
   width: 20%;
   height: 350px;
-  border: 1px solid yellowgreen;
   padding-left: 2%;
 }
 .switch-header{
@@ -194,4 +214,25 @@ ul li{
   padding: 20px 20px 20px 20px;
   display: inline-block;
   width: 30%;
+}
+.home {
+  /*padding-top: 39vh;
+  padding-bottom: 32.5vh;*/
+  padding: 19.25% 0%;
+}
+.searchContainer.home {
+  background-image: url('../images/various_desserts-wallpaper-5120x3200.jpg');
+  background-size: 100%;
+}
+footer{
+  width: 100%;
+  background-color:#2c3e50;
+  padding: 2% 0%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+html, body {
+  height: 100%
 }
