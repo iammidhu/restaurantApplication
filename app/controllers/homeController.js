@@ -1,4 +1,4 @@
-myApp.controller('homeController', ['$scope', '$location', 'searchQuery', 'createMarker', 'sharedData', function($scope, $location, searchQuery, createMarker, sharedData) {
+myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'searchQuery', 'createMarker', 'sharedData', function($scope, $location, $routeParams, searchQuery, createMarker, sharedData) {
 
     var mapOptions = {
         zoom: 17,
@@ -38,6 +38,11 @@ myApp.controller('homeController', ['$scope', '$location', 'searchQuery', 'creat
         });
     };
 
+
+    if($routeParams.query) {
+      $scope.searchModel = $routeParams.query;
+      $scope.submit($scope.searchModel);
+    }
     $scope.nextScreen = function(data) {
         var next = sharedData;
         next.set(data);
