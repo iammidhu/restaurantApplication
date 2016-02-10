@@ -4,15 +4,15 @@ var myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
     when('/', {
-        templateUrl: 'view/home.html',
+        templateUrl: 'app/partials/home.html',
         controller: 'homeController'
     }).
     when('/result', {
-        templateUrl: 'view/result.html',
-        controller: 'resultController'
+        templateUrl: 'app/partials/result.html',
+        controller: 'infoController'
     }).
     when('/checkout', {
-        templateUrl: 'view/checkout.html',
+        templateUrl: 'app/partials/checkout.html',
         controller: 'checkoutController'
     })
     $locationProvider.html5Mode(true);
