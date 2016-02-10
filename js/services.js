@@ -62,7 +62,7 @@ myApp.factory('sharedData', function() {
     }
 });
 
-myApp.factory('getMenuList', function() {
+myApp.factory('getMenuList',['$http', function($http) {
 
     var config = {
         url: 'list/menu.json',
@@ -87,4 +87,4 @@ myApp.factory('getMenuList', function() {
     };
 
     return getMenuList;
-});
+}]);
