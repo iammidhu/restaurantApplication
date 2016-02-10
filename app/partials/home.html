@@ -1,4 +1,3 @@
-<div ng-controller="homeController">
     <div class="searchContainer">
         <input type="text" class="search" ng-model="searchModel" placeholder="eg: sample restaurant">
         <input type="button" class="sButton" value="Search" ng-click="submit(searchModel)">
@@ -8,7 +7,7 @@
             <div class="error">{{errorMsg}}</div>
             <ul>
                 <li ng-repeat="data in resultList">
-                    <h2 class="hotelTitle"><a href="#">{{data.title}}</a></h2>
+                    <h2 class="hotelTitle"><a ng-click="nextScreen(data)">{{data.title}}</a></h2>
                     <p class="description">
                       {{data.desc}}
                     </p>
@@ -22,4 +21,3 @@
             <div id="map_canvas"></div>
         </div>
     </div>
-</div>
