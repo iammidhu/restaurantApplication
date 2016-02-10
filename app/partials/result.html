@@ -12,11 +12,20 @@
       <div ng-switch on="page">
         <div ng-switch-when="menu" class="switch-menu">
             <ul>
-              <li ng-repeat="data in menuList">
-                <ul>
-
+              <li>
+                <ul class="menu_items">
+                  <li class="menu_head">Name</li>
+                  <li class="menu_head">Price</li>
+                  <li></li>
                 </ul>
-                {{ data.name }} {{ data.price}}
+              </li>
+              <li ng-repeat="data in menuList">
+                <ul class="menu_items">
+                  <li>{{ data.name }}</li>
+                  <li>{{ data.price}}</li>
+                  <li ng-click="addItem(data)"><img src="assets/images/Icon_11-128.png" width="25" height="25" alt="" /></li>
+                </ul>
+
               </li>
             </ul>
         </div>
@@ -46,5 +55,8 @@
     </div>
     <div class="review">
       <h3>Your Order</h3>
+        <ul>
+          <li ng-repeat="added in review">{{added.item}}</li>
+        </ul>
     </div>
   </div>
