@@ -4,6 +4,10 @@ var myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
     when('/', {
+        templateUrl: 'app/partials/search.html',
+        controller: 'searchController'
+    }).
+    when('/search/:query', {
         templateUrl: 'app/partials/home.html',
         controller: 'homeController'
     }).
