@@ -63,7 +63,7 @@ myApp.factory('sharedData', function() {
 });
 
 myApp.factory('getMenuList', function() {
-    
+
     var config = {
         url: 'list/menu.json',
         method: 'GET'
@@ -77,6 +77,7 @@ myApp.factory('getMenuList', function() {
             for (i = 0; i < list.length; i++) {
                 if (list[i].id == id) {
                     searchResult = list[i].menu;
+                    break;
                 }
             }
             return searchResult;
