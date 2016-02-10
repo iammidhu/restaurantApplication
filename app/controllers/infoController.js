@@ -7,16 +7,16 @@ myApp.controller('infoController', ['$scope', 'sharedData', 'getMenuList', funct
     //when checkout is clicked, user is redirected to the checkout page.
     var next = sharedData;
     var data = next.get();
-    console.log(data);
+
     $scope.data=data;
     $scope.page = "menu";
     $scope.review = [];
     var jsonRequest = getMenuList(data.id);
     jsonRequest.then(function(response) {
         $scope.menuList = response;
-        console.log($scope.menuList);
+
     });
-    var addItem = function(data, count) {
+    $scope.addItem = function(data, count) {
         $scope.review.push({
             item: data.name,
             count: count,

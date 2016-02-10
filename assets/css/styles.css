@@ -190,9 +190,13 @@ ul li{
 .switch-menu{
   width: 100%;
   padding-left: 20px;
+  height: 400px;
 }
-.switch-menu ul{
+.switch-menu ul:first-child{
   list-style: none;
+  overflow-y: scroll;
+  height: 100%;
+  width: 91%;
 }
 .switch-info{
   width: 100%;
@@ -235,4 +239,19 @@ footer{
 
 html, body {
   height: 100%
+}
+.menu_items{
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.menu_items li{
+  width: 30%;
+}
+.menu_head{
+  font-size: 14px;
+  font-weight: bold;
+}
+.switch-info h2{
+  padding-left: 2%;
 }
