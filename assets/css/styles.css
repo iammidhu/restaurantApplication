@@ -163,9 +163,44 @@ ul li{
   height: 350px;
   padding-left: 2%;
 }
+.review ul {
+    height: 200px;
+    overflow-y: scroll;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.review ul li .itemCount {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid black;
+}
+.review ul li .itemTotal {
+    text-align: right;
+    margin-right: 10px;
+}
+.review ul li .itemName {
+    margin-left: 10px;
+}
+
+.review .subTotalContainer .subText{
+    width: 50%;
+    text-align: left;
+    display: inline;
+}
+.review .subTotalContainer .subValue, .review .totalContainer .totalValue{
+    width: 70%;
+    text-align: right;
+    display: inline-block;
+}
 .switch-header{
   width: 100%;
 
+}
+.review .subTotalContainer, .review .totalContainer {
+    position: relative;
+    top: 25%;
 }
 .switch-header ul{
   list-style: none;
@@ -194,9 +229,11 @@ ul li{
 }
 .switch-menu ul:first-child{
   list-style: none;
-  overflow-y: scroll;
-  height: 100%;
+  height: 82%;
   width: 91%;
+}
+.switch-menu .itemList {
+    overflow-y: scroll;
 }
 .switch-info{
   width: 100%;
