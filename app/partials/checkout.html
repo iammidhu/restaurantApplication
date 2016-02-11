@@ -1,3 +1,10 @@
-    Welcome {{username}}
-    <a href="/">home</a>
-    <a href="/result">result</a>
+<div class="restaurantName">{{info.data.title}}</div>
+<div class="orderSummary">
+    <ul>
+        <li ng-repeat="order in info.review">
+            <div class="orderItem">{{order.item}}</div>
+            <div class="orderCount">{{order.count}}</div>
+            <div class="orderTotal">{{order.total}}</div>
+        </li>
+    </ul>
+</div>
