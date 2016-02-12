@@ -198,7 +198,7 @@ ul li{
   width: 100%;
 
 }
-.review .subTotalContainer, .review .totalContainer {
+.review .subTotalContainer, .review .checkoutButtonContainer, .review .totalContainer {
     position: relative;
     top: 25%;
 }
@@ -291,4 +291,56 @@ html, body {
 }
 .switch-info h2{
   padding-left: 2%;
+}
+
+.orderSummary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.orderSummary ul li div {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
+.restaurantName {
+    text-align: center;
+    background-color: aquamarine;
+    padding: 28px 0px;
+    font-size: 28px;
+}
+
+.orderSummary {
+    width: 75%;
+    margin-top: 25px;
+}
+
+.checkoutButton {
+    width: 91%;
+    padding: 5px;
+    font-size: 18px;
+    outline: none;
+    border: 0;
+    margin-top: 6px;
+}
+
+.review .remove {
+    position: absolute;
+    right: 13px;
+    width: 10px;
+    height: 10px;
+    background-image: url('../images/remove-icon-md.png');
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+.totalAmount {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+.totalAmount .amount {
+    margin-left: 45%;
 }
