@@ -1,5 +1,6 @@
 <div class="restaurantName">{{info.data.title}}</div>
 <div class="orderSummary">
+    <h2>Order Summary</h2>
     <ul>
         <li ng-repeat="order in info.review">
             <div class="orderItem">{{order.item}}</div>
@@ -7,4 +8,5 @@
             <div class="orderTotal">{{order.total}}</div>
         </li>
     </ul>
+    <div class="totalAmount">Total:<span class="amount">{{info.total}}</span></div>
 </div>

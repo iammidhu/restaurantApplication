@@ -59,7 +59,7 @@
       <h3>Your Order</h3>
         <ul>
           <li ng-repeat="added in review">
-              <span class="itemCount">{{added.count}}</span><span class="itemName">{{added.item}}</span><span class="remove" ng-click="removeItem($index)">remove</span>
+              <span class="itemCount">{{added.count}}</span><span class="itemName">{{added.item}}</span><span class="remove" ng-click="removeItem($index)"></span>
               <div class="itemTotal">{{added.total | currency:"&#8377;"}}</div>
           </li>
         </ul>
@@ -71,6 +71,6 @@
             <span class="totalText">Total</span>
             <span class="totalValue">{{totalAmount | currency:"&#8377;"}}</span>
         </div>
-        <div class="checkoutButtonContainer"><input type="button" value="Checkout" ng-click="proceedToCheckout()" ng-disabled="isDisabled"></div>
+        <div class="checkoutButtonContainer"><input type="button" class="checkoutButton" value="Checkout" ng-click="proceedToCheckout()" ng-disabled="isDisabled"></div>
     </div>
   </div>

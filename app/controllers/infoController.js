@@ -1,4 +1,4 @@
-myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'getMenuList', function($scope, $location, sharedData, getMenuList) {
+myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checkoutData', 'getMenuList', function($scope, $location, sharedData, checkoutData, getMenuList) {
     var next = sharedData;
     var data = next.get();
     $scope.data = data;
@@ -6,10 +6,15 @@ myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'getMen
     $scope.review = [];
     $scope.subTotalAmount = 0;
     $scope.isDisabled = true;
+    var prevData = checkoutData.get();
+    if(prevData.prev == true) {
+        $scope.review = prevData.review;
+        $scope.subTotalAmount = prevData.total;
+        $scope.isDisabled = false;
+    }
     var jsonRequest = getMenuList(data.id);
     jsonRequest.then(function(response) {
         $scope.menuList = response;
-
     });
     $scope.addItem = function(data, count) {
         var isDuplicate = false;
@@ -43,20 +48,12 @@ myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'getMen
     };
 
     $scope.proceedToCheckout = function() {
-        next.set({
+        checkoutData.set({
             data : $scope.data,
             review : $scope.review,
-            total : $scope.subTotalAmount
+            total : $scope.subTotalAmount,
+            prev: true
         });
         $location.path('/checkout');
-    };
-    $scope.checkoutClick = function(data) {
-        if(data.length > 0) {
-            next.set(data);
-            $location.path('/checkout');
-            return true;
-        } else {
-            return false;
-        }
     };
 }]);
