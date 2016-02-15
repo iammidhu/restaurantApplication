@@ -3,6 +3,7 @@ myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checko
     var data = next.get();
     $scope.data = data;
     $scope.page = "menu";
+    $scope.class= "active";
     $scope.review = [];
     $scope.subTotalAmount = 0;
     $scope.isDisabled = true;
