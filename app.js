@@ -7,6 +7,10 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         templateUrl: 'app/partials/search.html',
         controller: 'searchController'
     }).
+    when('/about', {
+        templateUrl: 'app/partials/about.html',
+        controller: 'aboutController'
+    }).
     when('/search/:query', {
         templateUrl: 'app/partials/home.html',
         controller: 'homeController'

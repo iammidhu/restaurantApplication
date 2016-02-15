@@ -5,18 +5,29 @@
     <div class="menu-info">
       <div class="switch-header">
         <ul>
-          <li ng-click="page='menu'">Menu</li>
-          <li ng-click="page='info'">Info</li>
+          <li ng-click="page='menu'" ng-class="{active: page=='menu' }">Menu</li>
+          <li ng-click="page='info'" ng-class="{active: page=='info' }">Info</li>
         </ul>
       </div>
       <div ng-switch on="page">
         <div ng-switch-when="menu" class="switch-menu">
-            <ul>
-              <li ng-repeat="data in menuList">
-                <ul>
-
+            <ul class="itemList">
+              <li>
+                <ul class="menu_items">
+                  <li class="menu_head">Name</li>
+                  <li class="menu_head">Price</li>
+                  <li class="menu_head">Count</li>
+                  <li></li>
                 </ul>
-                {{ data.name }} {{ data.price}}
+              </li>
+              <li ng-repeat="data in menuList">
+                <ul class="menu_items">
+                  <li>{{ data.name }}</li>
+                  <li>{{ data.price | currency:"&#8377;"}}</li>
+                  <li><input type="number" ng-model="count" style="width: 30px;" ng-init="count=1"></li>
+                  <li ng-click="addItem(data, count)"><img src="assets/images/Icon_11-128.png" width="25" height="25" alt="" /></li>
+                </ul>
+
               </li>
             </ul>
         </div>
@@ -46,5 +57,20 @@
     </div>
     <div class="review">
       <h3>Your Order</h3>
+        <ul>
+          <li ng-repeat="added in review">
+              <span class="itemCount">{{added.count}}</span><span class="itemName">{{added.item}}</span><span class="remove" ng-click="removeItem($index)"></span>
+              <div class="itemTotal">{{added.total | currency:"&#8377;"}}</div>
+          </li>
+        </ul>
+        <div class="subTotalContainer">
+            <span class="subText">Subtotal</span>
+            <span class="subValue">{{subTotalAmount | currency:"&#8377;"}}</span>
+        </div>
+        <div class="totalContainer">
+            <span class="totalText">Total</span>
+            <span class="totalValue">{{totalAmount | currency:"&#8377;"}}</span>
+        </div>
+        <div class="checkoutButtonContainer"><input type="button" class="checkoutButton" value="Checkout" ng-click="proceedToCheckout()" ng-disabled="isDisabled"></div>
     </div>
   </div>
