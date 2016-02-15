@@ -9,6 +9,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
   /*overflow: hidden;*/
 }
 .mainHeading {
@@ -96,6 +97,7 @@ body {
 }
 .hotelTitle a {
   color: #5499BF;
+  cursor: pointer;
 }
 ul li {
   margin-bottom: 20px;
@@ -141,7 +143,7 @@ ul li {
   text-align: center;
   margin-left: 0;
   margin-right: 0;
-  background-color: #fccdd3;
+  background-color: #e8edf3;
   padding: 20px 0px;
   width: 100%;
 }
@@ -233,25 +235,24 @@ ul li {
 }
 .rinfo {
   width: 100%;
-  display: flex;
-  flex-direction: row;
+}
+.switch-info h2, .rinfo h3 {
+  font-weight: normal;
 }
 .address {
-  padding: 20px 20px 20px 20px;
-  width: 65%;
-  display: inline-block;
+  padding: 20px;
+  width: 50%;
+  border-bottom: 1px solid #B5B9D8;
 }
 .address p {
   word-break: break-all;
 }
 .work {
-  padding: 20px 20px 20px 20px;
-  display: inline-block;
-  width: 30%;
+  padding: 20px;
+  border-bottom: 1px solid #B5B9D8;
+  width: 50%;
 }
 .home {
-  /*padding-top: 39vh;
-  padding-bottom: 32.5vh;*/
   padding: 19.25% 0%;
 }
 .searchContainer.home {
@@ -277,6 +278,7 @@ html, body {
 }
 .menu_items li {
   width: 30%;
+  cursor: pointer;
 }
 .menu_head {
   font-size: 14px;
@@ -297,13 +299,31 @@ html, body {
 }
 .restaurantName {
   text-align: center;
-  background-color: aquamarine;
+  background-color: #e8edf3;
+  ;
   padding: 28px 0px;
   font-size: 28px;
 }
 .orderSummary {
   width: 75%;
   margin-top: 25px;
+}
+.orderSummary h2 {
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  border: 1px solid #b9d9cd;
+  border-right: 0;
+  border-left: 0;
+  padding: 20px 30px 20px 30px;
+  font-weight: 200;
+}
+.order {
+  padding: 5%;
+}
+.order ul li {
+  width: 100%;
+  font-size: small;
 }
 .checkoutButton {
   width: 91%;
@@ -324,11 +344,13 @@ html, body {
 }
 .totalAmount {
   width: 100%;
-  text-align: center;
-  font-size: 25px;
+  text-align: right;
+  font-size: 20px;
+  background-color: #E8EDF3;
 }
 .totalAmount .amount {
-  margin-left: 45%;
+  margin-left: 5%;
+  margin-right: 20%;
 }
 .menu {
   list-style: none;
@@ -355,16 +377,58 @@ html, body {
   width: 50%;
   text-align: right;
 }
-.active{
+.active {
   background-color: #CE7E88 !important;
 }
-.home .error{
+.home .error {
   font-size: 14px;
 }
-.about{
-  margin:0;
+.about {
+  margin: 0;
   margin-top: 3%;
   text-align: center;
   font-size: 26px;
   color: #22264B;
+}
+.checkoutButton:disabled {
+  cursor: not-allowed;
+}
+.payment {
+  padding: 5% 5% 5% 5%;
+  margin: 0 auto;
+  text-align: center;
+}
+.finishButton {
+  margin: 0 auto;
+  text-align: center;
+}
+.finish {
+  background-color: #50BB7B;
+  padding: 1%;
+  color: white;
+  width: 20%;
+}
+.finish:hover {
+  background-color: #5AEC95;
+}
+.styled-select select {
+  padding: 3px 3px 3px 3px;
+  margin: 0;
+  margin-left: 2%;
+  width: 20%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+  -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+  box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+  background: #f8f8f8;
+  color: #888;
+  border: none;
+  outline: none;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
 }
