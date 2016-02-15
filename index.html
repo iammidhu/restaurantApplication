@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
-<head>
-    <meta charset="UTF-8">
-    <title>Angular app</title>
 
-    <script src='//maps.googleapis.com/maps/api/js?sensor=false&extension=.js'></script>
-    <!-- <script src="lib/lodash.core.min.js" charset="utf-8"></script> -->
-    <script src="lib/angular.min.js" charset="utf-8"></script>
-    <!-- <script src="lib/angular-simple-logger.js" charset="utf-8"></script> -->
-    <!-- <script src="lib/angular-google-maps.js" charset="utf-8"></script> -->
-    <script src="lib/angular-route.min.js" charset="utf-8"></script>
-    <script src="app.js" charset="utf-8"></script>
-    <script src="app/controllers/checkoutController.js" charset="utf-8"></script>
-    <script src="app/controllers/homeController.js" charset="utf-8"></script>
-    <script src="app/controllers/searchController.js" charset="utf-8"></script>
-    <script src="app/controllers/infoController.js" charset="utf-8"></script>
-    <script src="app/services/mapService.js" charset="utf-8"></script>
-    <script src="app/services/menuService.js" charset="utf-8"></script>
-    <script src="app/services/searchService.js" charset="utf-8"></script>
-    <script src="app/services/sharedDataService.js" charset="utf-8"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Angular app</title>
+
+  <script src='//maps.googleapis.com/maps/api/js?sensor=false&extension=.js'></script>
+  <!-- <script src="lib/lodash.core.min.js" charset="utf-8"></script> -->
+  <script src="lib/angular.min.js" charset="utf-8"></script>
+  <!-- <script src="lib/angular-simple-logger.js" charset="utf-8"></script> -->
+  <!-- <script src="lib/angular-google-maps.js" charset="utf-8"></script> -->
+  <script src="lib/angular-route.min.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <script src="app/controllers/checkoutController.js" charset="utf-8"></script>
+  <script src="app/controllers/homeController.js" charset="utf-8"></script>
+  <script src="app/controllers/searchController.js" charset="utf-8"></script>
+  <script src="app/controllers/infoController.js" charset="utf-8"></script>
+  <script src="app/controllers/aboutController.js" charset="utf-8"></script>
+  <script src="app/services/mapService.js" charset="utf-8"></script>
+  <script src="app/services/menuService.js" charset="utf-8"></script>
+  <script src="app/services/searchService.js" charset="utf-8"></script>
+  <script src="app/services/sharedDataService.js" charset="utf-8"></script>
     <base href="/restaurantApp/" />
     <link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title" charset="utf-8">
 </head>
+
 <body>
   <header class="mainHeading">
     <h1>Findmytaste</h1>
+    <nav class="navigation_menu">
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About us</a></li>
+      </ul>
+    </nav>
   </header>
-    <div ng-view></div>
+  <div ng-view></div>
   <footer>
-    &copy; Qburst
+    &copy; 2016 Qburst
   </footer>
 </body>
+
 </html>
