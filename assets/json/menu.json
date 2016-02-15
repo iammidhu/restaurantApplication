@@ -5,13 +5,13 @@
     "price": "180"
   }, {
     "name": "Dal Fry",
-    "price": "Fry70"
+    "price": "70"
   }, {
     "name": "Channa Masala",
-    "price": "Masala80"
+    "price": "80"
   }, {
     "name": "Aloo Mutter",
-    "price": "Mutter90"
+    "price": "90"
   }, {
     "name": "Bigway Special Veg Curry",
     "price": "110"
@@ -26,10 +26,10 @@
     "price": "190"
   }, {
     "name": "Karimeen Pollichathu",
-    "price": "APS"
+    "price": "160"
   }, {
     "name": "Crab Chilly",
-    "price": "APS"
+    "price": "120"
   }, {
     "name": "Mutton Fry",
     "price": "190"
