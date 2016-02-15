@@ -5,8 +5,8 @@
     <div class="menu-info">
       <div class="switch-header">
         <ul>
-          <li ng-click="page='menu'">Menu</li>
-          <li ng-click="page='info'">Info</li>
+          <li ng-click="page='menu'" ng-class="{active: page=='menu' }">Menu</li>
+          <li ng-click="page='info'" ng-class="{active: page=='info' }">Info</li>
         </ul>
       </div>
       <div ng-switch on="page">
