@@ -22,6 +22,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
     when('/checkout', {
         templateUrl: 'app/partials/checkout.html',
         controller: 'checkoutController'
-    })
+    }).
+    otherwise({ redirectTo: '/' })
     $locationProvider.html5Mode(true);
 }]);
