@@ -1,12 +1,26 @@
 <div class="restaurantName">{{info.data.title}}</div>
 <div class="orderSummary">
-    <h2>Order Summary</h2>
+  <h2>Your Order Summary</h2>
+  <div class="order">
     <ul>
-        <li ng-repeat="order in info.review">
-            <div class="orderItem">{{order.item}}</div>
-            <div class="orderCount">{{order.count}}</div>
-            <div class="orderTotal">{{order.total}}</div>
-        </li>
+      <li ng-repeat="order in info.review">
+        <div class="orderItem">{{order.item}}</div>
+        <div class="orderCount">{{order.count}}</div>
+        <div class="orderTotal">{{order.total}}</div>
+      </li>
     </ul>
-    <div class="totalAmount">Total:<span class="amount">{{info.total}}</span></div>
+  </div>
+  <div class="totalAmount">Subtotal:<span class="amount">{{info.total}}</span></div>
+</div>
+<div class="payment">
+  <div class="styled-select">
+    Select your payment option :
+    <select>
+      <option>Cash on Delivery</option>
+      <option>Online pay</option>
+    </select>
+  </div>
+</div>
+<div class="finishButton">
+  <button type="button" class="finish">Place your order</button>
 </div>
