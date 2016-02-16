@@ -1,4 +1,4 @@
-myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checkoutData', 'getMenuList', function($scope, $location, sharedData, checkoutData, getMenuList) {
+myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checkoutData', 'getMenuList', 'getRandomColor', function($scope, $location, sharedData, checkoutData, getMenuList, getRandomColor) {
     var next = sharedData;
     var data = next.get();
     $scope.data = data;
@@ -7,6 +7,7 @@ myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checko
     $scope.review = [];
     $scope.subTotalAmount = 0;
     $scope.isDisabled = true;
+    document.querySelector('.randomBox').style.backgroundColor = getRandomColor();
     var prevData = checkoutData.get();
     if(prevData.prev == true) {
         $scope.review = prevData.review;

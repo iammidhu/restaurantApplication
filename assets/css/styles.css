@@ -15,18 +15,20 @@ body {
 .mainHeading {
   background-color: #b56969;
   text-align: left;
-  padding: 1%;
-  height: 9%;
+  padding: 1.5vh;
+  height: 70px;
   display: flex;
   flex-direction: row;
+  font-size: 15px;
+  font-weight: lighter;
 }
-.mainHeading h1 {
+.mainHeading h2 {
   font-family: 'Montserrat', sans-serif;
   color: #16193B;
   text-shadow: 13px 10px 11px;
   margin: 0;
   width: 50%;
-  line-height: 2.3;
+  line-height: 3;
 }
 .search-result-list {
   width: 45%;
@@ -37,6 +39,7 @@ body {
   display: flex;
   flex-direction: row;
   font-family: 'Montserrat', sans-serif;
+  height: 71vh;
 }
 .search-result-list ul {
   height: 63vh;
@@ -138,14 +141,18 @@ ul li {
   font-size: 14px;
 }
 .header {
-  font-size: 2em;
+  font-size: 1.2em;
   color: #292929;
-  text-align: center;
   margin-left: 0;
   margin-right: 0;
   background-color: #e8edf3;
-  padding: 20px 0px;
+  padding: 20px 0px 0px 10px;
   width: 100%;
+}
+.container {
+  height: 77.5vh;
+  padding-left: 12vw;
+  padding-right: 12vw;
 }
 .resBody {
   width: 100%;
@@ -154,12 +161,12 @@ ul li {
   /*margin-top: 2%;*/
 }
 .menu-info {
-  width: 80%;
+  width: 70%;
 }
 .review {
-  width: 20%;
-  height: 470px;
-  padding-left: 2%;
+  width: 30%;
+  height: 65vh;
+  padding-left: 2vh;
   background-image: url("../images/Translucent_50_percent_white.png");
 }
 .review ul {
@@ -169,6 +176,7 @@ ul li {
   padding: 0;
   margin: 0;
   padding-top: 5px;
+  font-size: 12px;
 }
 .review ul li .itemCount {
   padding: 2px 4px 2px 4px;
@@ -180,6 +188,9 @@ ul li {
 }
 .review ul li .itemName {
   margin-left: 10px;
+}
+.subTotalContainer {
+  font-size: 13px;
 }
 .review .subTotalContainer .subText {
   width: 50%;
@@ -205,28 +216,38 @@ ul li {
   width: 100%;
   margin-left: 0px;
   padding: 0;
+  font-size: 12px;
 }
 .switch-header ul li {
   width: 47%;
   padding: 20px 0px;
   text-align: center;
   background-color: #fccdd3;
+  background-repeat: no-repeat;
 }
 .switch-header ul li:first-child {
-  margin-right: 2%;
+  margin-right: 2vh;
+  background-image: url('../images/menu.png');
+  background-size: 35px 35px;
+  background-position: 87px 10px;
+}
+.switch-header ul li:nth-child(2) {
+  background-image: url('../images/images.png');
+  background-size: 20px;
+  background-position: 96px 17px;
 }
 .switch-header ul li:hover {
   cursor: pointer;
 }
 .switch-menu {
   width: 100%;
-  padding-left: 20px;
   height: 400px;
 }
 .switch-menu ul:first-child {
   list-style: none;
   height: 82%;
   width: 91%;
+  font-size: 12px;
 }
 .switch-menu .itemList {
   overflow-y: scroll;
@@ -237,8 +258,12 @@ ul li {
 .rinfo {
   width: 100%;
 }
-.switch-info h2, .rinfo h3 {
+.rinfo h3 {
+  font-size: 0.8em;
+}
+.switch-info h2 {
   font-weight: normal;
+  font-size: 1.1em;
 }
 .address {
   padding: 20px;
@@ -247,6 +272,7 @@ ul li {
 }
 .address p {
   word-break: break-all;
+  font-size: small;
 }
 .work {
   padding: 20px;
@@ -254,18 +280,18 @@ ul li {
   width: 50%;
 }
 .home {
-  padding: 19.25% 0%;
+  padding: 35vh 0%;
 }
 .homepage {
   background-image: url('../images/337094-zero.jpg');
-  background-size: 100%;
+  background-size: 125%;
   background-repeat: no-repeat;
 }
 footer {
   width: 100%;
   background-color: #22264b;
   color: #8D9096;
-  padding: 2% 0%;
+  padding: 4.2vh 0%;
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -279,7 +305,11 @@ html, body {
   overflow: hidden;
 }
 .menu_items li {
-  width: 30%;
+  width: 25%;
+  text-align: center;
+  font-size: 13px;
+}
+.menu_items li img {
   cursor: pointer;
 }
 .menu_head {
@@ -372,9 +402,10 @@ html, body {
 .menu li a {
   text-decoration: none;
   color: #000;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0px 0px 5px 0px rgba(190, 190, 190, 0.75);
   margin-right: 5px;
+  font-size: 10px;
 }
 .navigation_menu {
   width: 50%;
@@ -434,4 +465,28 @@ html, body {
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+}
+.header-wrap {
+  display: flex;
+  flex-direction: row;
+}
+.randomBox {
+  margin-top: 2vh;
+  height: 61px;
+  width: 61px;
+  background-color: red;
+}
+.randomBox p {
+  font-size: 8px;
+  text-align: center;
+  line-height: 5em;
+  color: white;
+  /* Safari */
+  -webkit-transform: rotate(-45deg);
+  /* Firefox */
+  -moz-transform: rotate(-45deg);
+  /* IE */
+  -ms-transform: rotate(-45deg);
+  /* Opera */
+  -o-transform: rotate(-60deg);
 }
