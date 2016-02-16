@@ -1,6 +1,15 @@
-  <div class="header">
-    {{ data.title }}
+<div class="container">
+  <div class="header-wrap">
+    <div class="randomBox">
+      <p>
+        {{ data.title }}
+      </p>
+    </div>
+    <div class="header">
+      {{ data.title }}
+    </div>
   </div>
+
   <div class="resBody">
     <div class="menu-info">
       <div class="switch-header">
@@ -11,44 +20,46 @@
       </div>
       <div ng-switch on="page">
         <div ng-switch-when="menu" class="switch-menu">
-            <ul class="itemList">
-              <li>
-                <ul class="menu_items">
-                  <li class="menu_head">Name</li>
-                  <li class="menu_head">Price</li>
-                  <li class="menu_head">Count</li>
-                  <li></li>
-                </ul>
-              </li>
-              <li ng-repeat="data in menuList">
-                <ul class="menu_items">
-                  <li>{{ data.name }}</li>
-                  <li>{{ data.price | currency:"&#8377;"}}</li>
-                  <li><input type="number" ng-model="count" style="width: 30px;" ng-init="count=1"></li>
-                  <li ng-click="addItem(data, count)"><img src="assets/images/Icon_11-128.png" width="25" height="25" alt="" /></li>
-                </ul>
+          <ul class="itemList">
+            <li>
+              <ul class="menu_items">
+                <li class="menu_head">Name</li>
+                <li class="menu_head">Price</li>
+                <li class="menu_head">Count</li>
+                <li></li>
+              </ul>
+            </li>
+            <li ng-repeat="data in menuList">
+              <ul class="menu_items">
+                <li>{{ data.name }}</li>
+                <li>{{ data.price | currency:"&#8377;"}}</li>
+                <li>
+                  <input type="number" ng-model="count" style="width: 30px;" ng-init="count=1">
+                </li>
+                <li ng-click="addItem(data, count)"><img src="assets/images/Icon_11-128.png" width="25" height="25" alt="" /></li>
+              </ul>
 
-              </li>
-            </ul>
+            </li>
+          </ul>
         </div>
         <div ng-switch-when="info" class="switch-info">
           <h2>{{ data.title }} Restaurant info</h2>
           <div class="rinfo">
-            <div class="address">
-              <h3>
-                Address
-              </h3>
-              <p>
-                  {{ data.desc }}
-              </p>
-              <p>
-                {{ data.phoneNo }}
-              </p>
-            </div>
             <div class="work">
               <h3>Working hours</h3>
               <p>
-              {{ data.working }}
+                {{ data.working }}
+              </p>
+            </div>
+            <div class="address">
+              <h3>
+                  Address
+                </h3>
+              <p>
+                {{ data.desc }}
+              </p>
+              <p>
+                {{ data.phoneNo }}
               </p>
             </div>
           </div>
@@ -56,21 +67,20 @@
       </div>
     </div>
     <div class="review">
-      <h3>Your Order</h3>
-        <ul>
-          <li ng-repeat="added in review">
-              <span class="itemCount">{{added.count}}</span><span class="itemName">{{added.item}}</span><span class="remove" ng-click="removeItem($index)"></span>
-              <div class="itemTotal">{{added.total | currency:"&#8377;"}}</div>
-          </li>
-        </ul>
-        <div class="subTotalContainer">
-            <span class="subText">Subtotal</span>
-            <span class="subValue">{{subTotalAmount | currency:"&#8377;"}}</span>
-        </div>
-        <div class="totalContainer">
-            <span class="totalText">Total</span>
-            <span class="totalValue">{{totalAmount | currency:"&#8377;"}}</span>
-        </div>
-        <div class="checkoutButtonContainer"><input type="button" class="checkoutButton" value="Checkout" ng-click="proceedToCheckout()" ng-disabled="isDisabled"></div>
+      <h4>Your Order</h4>
+      <ul>
+        <li ng-repeat="added in review">
+          <span class="itemCount">{{added.count}}</span><span class="itemName">{{added.item}}</span><span class="remove" ng-click="removeItem($index)"></span>
+          <div class="itemTotal">{{added.total | currency:"&#8377;"}}</div>
+        </li>
+      </ul>
+      <div class="subTotalContainer">
+        <span class="subText">Subtotal</span>
+        <span class="subValue">{{subTotalAmount | currency:"&#8377;"}}</span>
+      </div>
+      <div class="checkoutButtonContainer">
+        <input type="button" class="checkoutButton" value="Proceed to Checkout" ng-click="proceedToCheckout()" ng-disabled="isDisabled">
+      </div>
     </div>
   </div>
+</div>

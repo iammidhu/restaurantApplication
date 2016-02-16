@@ -21,14 +21,14 @@
   <script src="app/services/menuService.js" charset="utf-8"></script>
   <script src="app/services/searchService.js" charset="utf-8"></script>
   <script src="app/services/sharedDataService.js" charset="utf-8"></script>
-
+  <script src="app/services/colorService.js" charset="utf-8"></script>
   <base href="/" />
   <link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body>
   <header class="mainHeading">
-    <h1>Findmytaste</h1>
+    <h2>Findmytaste</h2>
     <nav class="navigation_menu">
       <ul class="menu">
         <li><a href="/">Home</a></li>
@@ -36,7 +36,7 @@
       </ul>
     </nav>
   </header>
-  <div ng-view></div>
+  <div class="homepage" ng-view></div>
   <footer>
     &copy; 2016 Qburst
   </footer>
