@@ -1,4 +1,4 @@
-myApp.controller('searchController', ['$scope', '$location', function($scope, $location) {
+myApp.controller('searchController', ['$scope', '$location', 'sharedData', 'checkoutData', function($scope, $location, sharedData, checkoutData) {
   $scope.submitHome = function(data) {
     if(data) {
 
@@ -9,4 +9,6 @@ myApp.controller('searchController', ['$scope', '$location', function($scope, $l
       $scope.error="Please enter something";
     }
   };
+    sharedData.set({});
+    checkoutData.set({});
 }]);
