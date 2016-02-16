@@ -158,8 +158,9 @@ ul li {
 }
 .review {
   width: 20%;
-  height: 350px;
+  height: 470px;
   padding-left: 2%;
+  background-image: url("../images/Translucent_50_percent_white.png");
 }
 .review ul {
   height: 200px;
@@ -255,8 +256,8 @@ ul li {
 .home {
   padding: 19.25% 0%;
 }
-.searchContainer.home {
-  background-image: url('../images/restaurant-img40.jpg');
+.homepage {
+  background-image: url('../images/337094-zero.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -292,6 +293,8 @@ html, body {
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 115px;
+  overflow-y: scroll;
 }
 .orderSummary ul li div {
   display: inline-block;
@@ -320,7 +323,7 @@ html, body {
   font-weight: 200;
 }
 .order {
-  padding: 5%;
+  padding: 2%;
 }
 .order ul li {
   width: 100%;
@@ -335,19 +338,18 @@ html, body {
   margin-top: 6px;
 }
 .review .remove {
-  position: absolute;
-  right: 13px;
   width: 10px;
   height: 10px;
   background-image: url('../images/remove-icon-md.png');
   background-size: 10px 10px;
   background-repeat: no-repeat;
+  display: inline-block;
+  float: right;
 }
 .totalAmount {
   width: 100%;
   text-align: right;
   font-size: 20px;
-  background-color: #E8EDF3;
 }
 .totalAmount .amount {
   margin-left: 5%;

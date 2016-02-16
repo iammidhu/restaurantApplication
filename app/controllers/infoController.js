@@ -21,12 +21,13 @@ myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checko
         var isDuplicate = false;
         $scope.isDisabled = false;
         for(var i = 0; i < $scope.review.length; i++) {
+          console.log($scope.review);
             if($scope.review[i].item == data.name) {
-                $scope.review[i].count += count;
-                $scope.review[i].total = $scope.review[i].count * data.price;
+              $scope.review[i].count += count;
+                $scope.review[i].total += count * data.price;
                 isDuplicate = true;
+                $scope.subTotalAmount += count * data.price;
             }
-            $scope.subTotalAmount += $scope.review[i].total;
         }
         if(!isDuplicate) {
             $scope.review.push({
@@ -35,6 +36,7 @@ myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checko
                 pricePerItem: data.price,
                 total: (count*data.price)
             });
+            $scope.subTotalAmount += $scope.review[$scope.review.length-1].total;
         }
         if($scope.review.length == 1) {
             $scope.subTotalAmount = $scope.review[0].total;
