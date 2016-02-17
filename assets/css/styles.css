@@ -333,7 +333,7 @@ html, body {
 .restaurantName {
   text-align: center;
   background-color: #e8edf3;
-  padding: 28px 0px;
+  padding: 2vh 0px;
   font-size: 1.2em;
 }
 .orderSummary {
@@ -499,4 +499,19 @@ html, body {
 }
 .checkoutPage {
   height: 77.5vh;
+}
+.backButton {
+  padding-left: 3vh;
+  background: url('../images/arrow.png') no-repeat;
+  background-size: 20px 20px;
+  background-position: 0px 0px;
+}
+.backButton a {
+  text-decoration: none;
+  color: brown;
+}
+.backButton a:hover {
+  color: brown;
+  text-decoration: underline;
+  ;
 }
