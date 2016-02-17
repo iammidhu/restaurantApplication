@@ -351,15 +351,15 @@ html, body {
 .restaurantName {
     text-align: center;
     background-color: #e8edf3;
-    ;
     padding: 28px 0px;
-    font-size: 28px;
+    font-size: 1.2em;
 }
 .orderSummary {
     width: 75%;
     margin-top: 25px;
 }
 .orderSummary h2 {
+      font-size: 1em;
     width: 100%;
     z-index: 1;
     left: 0;
@@ -396,7 +396,7 @@ html, body {
 .totalAmount {
     width: 100%;
     text-align: right;
-    font-size: 20px;
+    font-size: 15px;
 }
 .totalAmount .amount {
     margin-left: 5%;
@@ -447,22 +447,23 @@ html, body {
     cursor: not-allowed;
 }
 .payment {
-    padding: 5% 5% 5% 5%;
+    padding: 5vh;
     margin: 0 auto;
     text-align: center;
+    font-size: 14px;
 }
 .finishButton {
     margin: 0 auto;
     text-align: center;
 }
 .finish {
-    background-color: #50BB7B;
+    background-color: #5860A5;
     padding: 1%;
     color: white;
     width: 20%;
 }
 .finish:hover {
-    background-color: #5AEC95;
+    background-color: #1928AB;
 }
 .styled-select select {
     padding: 3px 3px 3px 3px;
@@ -516,4 +517,7 @@ html, body {
   -ms-transform: rotate(-45deg);
   /* Opera */
   -o-transform: rotate(-60deg);
+}
+.checkoutPage{
+  height: 77.5vh;
 }
