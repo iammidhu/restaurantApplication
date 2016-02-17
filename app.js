@@ -23,6 +23,10 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         templateUrl: 'app/partials/checkout.html',
         controller: 'checkoutController'
     }).
+    when('/success', {
+        templateUrl: 'app/partials/success.html',
+        controller: 'successController'
+    }).
     otherwise({ redirectTo: '/' })
     $locationProvider.html5Mode(true);
 }]);

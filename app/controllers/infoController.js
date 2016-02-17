@@ -22,7 +22,6 @@ myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checko
         var isDuplicate = false;
         $scope.isDisabled = false;
         for(var i = 0; i < $scope.review.length; i++) {
-          console.log($scope.review);
             if($scope.review[i].item == data.name) {
               $scope.review[i].count += count;
                 $scope.review[i].total += count * data.price;
