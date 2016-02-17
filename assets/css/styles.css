@@ -447,9 +447,10 @@ html, body {
     cursor: not-allowed;
 }
 .payment {
-    padding: 5% 5% 5% 5%;
+    padding: 5vh;
     margin: 0 auto;
     text-align: center;
+    font-size: 14px;
 }
 .finishButton {
     margin: 0 auto;
