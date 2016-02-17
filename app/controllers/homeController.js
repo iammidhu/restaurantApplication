@@ -25,7 +25,7 @@ myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'sear
                 if($scope.resultList.length == 1) {
                     $scope.map.setZoom(17);
                 }
-                if($scope.resultList.length > 3) {
+                if($scope.resultList.length > 2) {
                     document.querySelector('.search-result-list ul').style.overflowY = "scroll";
                 } else {
                     document.querySelector('.search-result-list ul').style.overflowY = "visible";
