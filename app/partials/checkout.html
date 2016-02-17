@@ -8,7 +8,7 @@
           <div class="delete_row" ng-click="deleteRow($index)"></div>
           <div class="orderItem">{{order.item}}</div>
           <div class="orderCount">
-            <input type="number" ng-model="order.count" style="width: 30px;" ng-change="change($index, order.count, $event)">
+            <input type="number" ng-model="order.count" min=0 max=20 style="width: 30px;" ng-change="change($index, order.count, $event)">
           </div>
           <div class="orderTotal">{{order.total}}</div>
         </li>
