@@ -22,13 +22,13 @@ body {
   font-size: 15px;
   font-weight: lighter;
 }
-.mainHeading h2 {
+.mainHeading h1 {
   font-family: 'Montserrat', sans-serif;
   color: #16193B;
   text-shadow: 13px 10px 11px;
   margin: 0;
   width: 50%;
-  line-height: 3;
+  line-height: 2.5;
 }
 .search-result-list {
   width: 45%;
@@ -283,8 +283,9 @@ ul li {
 }
 .homepage {
   background-image: url('../images/337094-zero.jpg');
-  background-size: 125%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: right bottom; 
 }
 footer {
   width: 100%;
