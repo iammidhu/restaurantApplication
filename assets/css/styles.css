@@ -438,13 +438,13 @@ html, body {
   text-align: center;
 }
 .finish {
-  background-color: #5860A5;
+  background-color: white;
   padding: 1%;
-  color: white;
+  color: black;
   width: 20%;
 }
-.finish:hover {
-  background-color: #1928AB;
+.finish:disabled {
+  cursor: not-allowed;
 }
 .styled-select select {
   padding: 3px 3px 3px 3px;
@@ -514,5 +514,12 @@ html, body {
 .backButton a:hover {
   color: brown;
   text-decoration: underline;
-  ;
+}
+.success {
+  font-size: 17px;
+  color: cornflowerblue;
+  line-height: 20;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
 }

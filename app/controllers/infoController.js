@@ -11,8 +11,12 @@ myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checko
     var prevData = checkoutData.get();
     if(prevData.prev == true) {
         $scope.review = prevData.review;
+        if(prevData.review.length == 0) {
+          $scope.isDisabled = true;
+        } else {
+          $scope.isDisabled = false;
+        }
         $scope.subTotalAmount = prevData.total;
-        $scope.isDisabled = false;
     }
     var jsonRequest = getMenuList(data.id);
     jsonRequest.then(function(response) {
@@ -22,7 +26,6 @@ myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checko
         var isDuplicate = false;
         $scope.isDisabled = false;
         for(var i = 0; i < $scope.review.length; i++) {
-          console.log($scope.review);
             if($scope.review[i].item == data.name) {
               $scope.review[i].count += count;
                 $scope.review[i].total += count * data.price;
