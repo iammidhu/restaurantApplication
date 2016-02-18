@@ -3,10 +3,13 @@ myApp.controller('checkoutController', ['$scope','$location', 'checkoutData', fu
     var next = checkoutData;
     var data = next.get();
     $scope.info = data;
-    $scope.isDisabled = true;
+    $scope.isDisabled = false;
     $scope.deleteRow = function(index) {
         $scope.info.total -= $scope.info.review[index].total;
         $scope.info.review.splice(index, 1);
+        if ($scope.info.total == 0) {
+          $scope.isDisabled = true;
+        }
     }
     $scope.change = function(index, changeCount, $event) {
         $scope.info.total -= $scope.info.review[index].total;

@@ -11,8 +11,12 @@ myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checko
     var prevData = checkoutData.get();
     if(prevData.prev == true) {
         $scope.review = prevData.review;
+        if(prevData.review.length == 0) {
+          $scope.isDisabled = true;
+        } else {
+          $scope.isDisabled = false;
+        }
         $scope.subTotalAmount = prevData.total;
-        $scope.isDisabled = false;
     }
     var jsonRequest = getMenuList(data.id);
     jsonRequest.then(function(response) {

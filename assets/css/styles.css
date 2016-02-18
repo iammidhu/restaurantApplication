@@ -437,13 +437,13 @@ html, body {
   text-align: center;
 }
 .finish {
-  background-color: #5860A5;
+  background-color: white;
   padding: 1%;
-  color: white;
+  color: black;
   width: 20%;
 }
-.finish:hover {
-  background-color: #1928AB;
+.finish:disabled {
+  cursor: not-allowed;
 }
 .styled-select select {
   padding: 3px 3px 3px 3px;
