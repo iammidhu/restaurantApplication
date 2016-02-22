@@ -8,6 +8,9 @@
             <ul>
                 <li ng-repeat="data in resultList">
                     <h3 class="hotelTitle"><a ng-click="nextScreen(data)">{{data.title}}</a></h3>
+                    <p class="cuisines">
+                      {{data.Cuisines}}
+                    </p>
                     <p class="description">
                       {{data.desc}}
                     </p>
