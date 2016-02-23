@@ -7,6 +7,55 @@ myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'sear
     };
     $scope.markers = [];
     $resultList = [];
+    var cuisine = [{
+      "cuisine": "North Indian",
+      "value": "false"
+    }, {
+      "cuisine": "South Indian",
+      "value": "false"
+    }, {
+      "cuisine": "Biriyani",
+      "value": "false"
+    }, {
+      "cuisine": "Chineese",
+      "value": "false"
+    }, {
+      "cuisine": "Desserts",
+      "value": "false"
+    }, {
+      "cuisine": "Snacks",
+      "value": "false"
+    }, {
+      "cuisine": "Cakes",
+      "value": "false"
+    }, {
+      "cuisine": "Italian",
+      "value": "false"
+    }, {
+      "cuisine": "Sandwiches",
+      "value": "false"
+    }, {
+      "cuisine": "Pizza",
+      "value": "false"
+    }, {
+      "cuisine": "Salads",
+      "value": "false"
+    }, {
+      "cuisine": "Burgers",
+      "value": "false"
+    }, {
+      "cuisine": "Juice",
+      "value": "false"
+    }, {
+      "cuisine": "Beverages",
+      "value": "false"
+    },
+
+  ];
+  $scope.filters = cuisine;
+  $scope.filterCuisine = function(filter){
+    $scope.f = filter;
+  };
     $scope.submit = function(data) {
         dataPromise = searchQuery(data);
         $scope.markers = [];

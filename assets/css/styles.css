@@ -524,3 +524,29 @@ html, body {
   margin-right: 0;
   text-align: center;
 }
+.mainContainer {
+  padding-left: 15vh;
+  padding-right: 15vh;
+}
+.filterContents {
+  width: 20%;
+}
+.filterTitle {
+  margin-top: 40px;
+  font-size: 15px;
+  margin-left: 10px;
+  color: #000;
+}
+.filter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.filter_item {
+  font-size: 12px;
+}
+.filter_item li {
+  padding: 1vh 0 1vh 0;
+  margin: 0;
+  color: #666;
+}

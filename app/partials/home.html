@@ -1,23 +1,38 @@
-    <div class="searchContainer">
-        <input type="text" class="search" ng-model="searchModel" placeholder="eg: sample restaurant">
-        <input type="button" class="sButton" value="Search" ng-click="submit(searchModel)">
+<div class="mainContainer">
+  <div class="searchContainer">
+    <input type="text" class="search" ng-model="searchModel" placeholder="eg: sample restaurant">
+    <input type="button" class="sButton" value="Search" ng-click="submit(searchModel)">
+  </div>
+  <div class="error">{{errorMsg}}</div>
+  <div class="resultContainer">
+    <div class="filterContents">
+      <div class="filterTitle">
+        Cuisines
+      </div>
+      <div class="filter">
+        <ul class="filter_item">
+          <li ng-repeat="filter in filters">
+            <input type="checkbox" name="cuisine0" ng-click="filterCuisine(filter.cuisine)">
+            <label for="cuisine0">{{filter.cuisine}}</label>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="error">{{errorMsg}}</div>
-    <div class="resultContainer">
-        <div class="search-result-list">
-            <ul>
-                <li ng-repeat="data in resultList">
-                    <h3 class="hotelTitle"><a ng-click="nextScreen(data)">{{data.title}}</a></h3>
-                    <p class="description">
-                      {{data.desc}}
-                    </p>
-                    <p class="description">
-                    {{data.phoneNo}}
-                    </p>
-                </li>
-            </ul>
-        </div>
-        <div class="search-result-map">
-            <div id="map_canvas"></div>
-        </div>
+    <div class="search-result-list">
+      <ul>
+        <li ng-repeat="data in resultList">
+          <h3 class="hotelTitle"><a ng-click="nextScreen(data)">{{data.title}}</a></h3>
+          <p class="description">
+            {{data.desc}}
+          </p>
+          <p class="description">
+            {{data.phoneNo}}
+          </p>
+        </li>
+      </ul>
     </div>
+    <div class="search-result-map">
+      <div id="map_canvas"></div>
+    </div>
+  </div>
+</div>
