@@ -8,7 +8,6 @@ myApp.filter('filterProvider', function() {
         angular.forEach(filterData, function(filter) {
           if (item.Cuisines.indexOf(filter) > -1) {
             output.push(item);
-            return;
           }
         });
       });
