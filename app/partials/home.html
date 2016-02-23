@@ -20,7 +20,7 @@
     </div>
     <div class="search-result-list">
       <ul>
-        <li ng-repeat="data in resultList">
+        <li ng-repeat="data in resultList | filter:f">
           <h3 class="hotelTitle"><a ng-click="nextScreen(data)">{{data.title}}</a></h3>
           <p class="description">
             {{data.desc}}

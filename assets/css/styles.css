@@ -31,7 +31,7 @@ body {
   line-height: 2.5;
 }
 .search-result-list {
-  width: 45%;
+  width: 40%;
   margin-right: 5%;
   /*margn-top: 8px;*/
 }
@@ -46,15 +46,15 @@ body {
   /*overflow-y: scroll;*/
   /*display: none;*/
 }
-.resultContainer li {
+.resultContainer .search-result-list li {
   padding: 10px 10px 10px 10px;
   box-shadow: 3px 4px 5px 0px rgba(190, 190, 190, 0.75);
 }
-.resultContainer li:hover {
+.resultContainer .search-result-list li:hover {
   box-shadow: 2px 3px 5px 0px rgba(190, 190, 190, 0.75);
 }
 .search-result-map {
-  width: 45%;
+  width: 40%;
   margin-top: 18px;
 }
 .searchContainer {
@@ -101,6 +101,9 @@ body {
 .hotelTitle a {
   color: #5499BF;
   cursor: pointer;
+}
+.hotelTitle {
+  padding: 0;
 }
 ul li {
   margin-bottom: 20px;
@@ -549,4 +552,8 @@ html, body {
   padding: 1vh 0 1vh 0;
   margin: 0;
   color: #666;
+}
+.cuisines {
+  font-size: 10px;
+  color: #8D8C80;
 }
