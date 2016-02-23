@@ -12,7 +12,7 @@
       <div class="filter">
         <ul class="filter_item">
           <li ng-repeat="filter in filters">
-            <input type="checkbox" name="cuisine0" ng-click="filterCuisine(filter.cuisine)">
+            <input type="checkbox" id="cuisine" ng-click="filterCuisine(filter.cuisine)">
             <label for="cuisine0">{{filter.cuisine}}</label>
           </li>
         </ul>
