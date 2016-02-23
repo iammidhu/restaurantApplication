@@ -52,9 +52,10 @@ myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'sear
     },
 
   ];
+  $scope.filterData = [];
   $scope.filters = cuisine;
   $scope.filterCuisine = function(filter){
-    $scope.f = filter;
+    $scope.filterData.push(filter);
   };
     $scope.submit = function(data) {
         dataPromise = searchQuery(data);

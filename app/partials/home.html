@@ -18,18 +18,27 @@
         </ul>
       </div>
     </div>
-    <div class="search-result-list">
-      <ul>
-        <li ng-repeat="data in resultList | filter:f">
-          <h3 class="hotelTitle"><a ng-click="nextScreen(data)">{{data.title}}</a></h3>
-          <p class="description">
-            {{data.desc}}
-          </p>
-          <p class="description">
-            {{data.phoneNo}}
-          </p>
-        </li>
-      </ul>
+    <div class="error">{{errorMsg}}</div>
+    <div class="resultContainer">
+        <div class="search-result-list">
+            <ul>
+                <li ng-repeat="data in resultList | filterProvider: filterData">
+                    <h3 class="hotelTitle"><a ng-click="nextScreen(data)">{{data.title}}</a></h3>
+                    <p class="cuisines">
+                      {{data.Cuisines}}
+                    </p>
+                    <p class="description">
+                      {{data.desc}}
+                    </p>
+                    <p class="description">
+                    {{data.phoneNo}}
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="search-result-map">
+            <div id="map_canvas"></div>
+        </div>
     </div>
     <div class="search-result-map">
       <div id="map_canvas"></div>
