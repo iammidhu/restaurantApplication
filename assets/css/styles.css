@@ -540,15 +540,16 @@ html, body {
   height: 10vh;
   width: 100%;
 }
-.food_title{
+.food_title {
   font-size: 1.5em;
   color: chocolate;
+  text-transform: capitalize;
 }
-.food_title p{
+.food_title p {
   font-size: 12px;
   color: orange;
 }
 .cuisines {
   font-size: 10px;
-  color: #8D8C80;
+  color: #8D9096;
 }
