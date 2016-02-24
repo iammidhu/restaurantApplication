@@ -11,7 +11,7 @@ myApp.factory('searchQuery', ['$http', function($http) {
         return $http(config).then(function(response) {
             list = response.data;
             for (i = 0; i < list.length; i++) {
-                if (list[i].title.toLowerCase().indexOf(data.toLowerCase()) > -1 || list[i].desc.toLowerCase().indexOf(data.toLowerCase()) > -1) {
+                if (list[i].title.toLowerCase().indexOf(data.toLowerCase()) > -1 || list[i].location.toLowerCase().indexOf(data.toLowerCase()) > -1) {
                     searchResult.push(list[i]);
                 }
             }
