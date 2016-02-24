@@ -4,14 +4,15 @@ myApp.filter('filterProvider', function() {
     if (filterData.length == 0) {
       return input;
     } else {
-      angular.forEach(input, function(item) {
-        angular.forEach(filterData, function(filter) {
+      angular.forEach(filterData, function(filter) {
+        angular.forEach(input, function(item) {
           if (item.Cuisines.indexOf(filter) > -1) {
-            output.push(item);
+            if (output.indexOf(item) == -1) {
+              output.push(item);
+            }
           }
         });
       });
-
       return output;
     }
   }
