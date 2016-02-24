@@ -7,50 +7,21 @@ myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'sear
   };
   $scope.markers = [];
   $resultList = [];
-  var cuisine = [{
-      "cuisine": "North Indian",
-      "value": "false"
-    }, {
-      "cuisine": "South Indian",
-      "value": "false"
-    }, {
-      "cuisine": "Biriyani",
-      "value": "false"
-    }, {
-      "cuisine": "Chineese",
-      "value": "false"
-    }, {
-      "cuisine": "Desserts",
-      "value": "false"
-    }, {
-      "cuisine": "Snacks",
-      "value": "false"
-    }, {
-      "cuisine": "Cakes",
-      "value": "false"
-    }, {
-      "cuisine": "Italian",
-      "value": "false"
-    }, {
-      "cuisine": "Sandwiches",
-      "value": "false"
-    }, {
-      "cuisine": "Pizza",
-      "value": "false"
-    }, {
-      "cuisine": "Salads",
-      "value": "false"
-    }, {
-      "cuisine": "Burgers",
-      "value": "false"
-    }, {
-      "cuisine": "Juice",
-      "value": "false"
-    }, {
-      "cuisine": "Beverages",
-      "value": "false"
-    },
-
+  var cuisine = [
+    "North Indian",
+    "South Indian",
+    "Biriyani",
+    "Chineese",
+    "Desserts",
+    "Snacks",
+    "Cakes",
+    "Italian",
+    "Sandwiches",
+    "Pizza",
+    "Salads",
+    "Burgers",
+    "Juice",
+    "Beverages",
   ];
   $scope.filterData = [];
   $scope.filters = cuisine;
@@ -58,7 +29,7 @@ myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'sear
 
     if ($scope.filterData.indexOf(filter) > -1) {
       var index = $scope.filterData.indexOf(filter);
-      $scope.filterData.splice(index,1);
+      $scope.filterData.splice(index, 1);
     } else {
       $scope.filterData.push(filter);
     }
@@ -89,6 +60,7 @@ myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'sear
       } else {
         $scope.errorMsg = "Nothing found";
         document.getElementById('map_canvas').style.display = "none";
+        document.querySelector('.filterContents').style.display = "none";
         document.querySelector('.error').style.display = "block";
       }
     });

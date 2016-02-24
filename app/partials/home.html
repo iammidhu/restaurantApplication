@@ -11,9 +11,9 @@
       </div>
       <div class="filter">
         <ul class="filter_item">
-          <li ng-repeat="filter in filters">
-            <input type="checkbox" id="cuisine" ng-click="filterCuisine(filter.cuisine)">
-            <label for="cuisine0">{{filter.cuisine}}</label>
+          <li ng-repeat="cuisine in filters">
+            <input type="checkbox" id="cuisine" ng-click="filterCuisine(cuisine)">
+            <label for="cuisine0">{{cuisine}}</label>
           </li>
         </ul>
       </div>
