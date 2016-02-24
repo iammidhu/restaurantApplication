@@ -279,7 +279,7 @@ ul li {
   width: 50%;
 }
 .home {
-  padding: 35vh 0%;
+  padding: 0% 0%;
 }
 .homepage {
   background-image: url('../images/337094-zero.jpg');
@@ -524,7 +524,32 @@ html, body {
   margin-right: 0;
   text-align: center;
 }
+.food {
+  height: 20vh;
+  padding-top: 20vh;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  width: 100%;
+}
+.food_icon {
+  background-image: url('../images/food_icon.png');
+  background-size: 4% 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 10vh;
+  width: 100%;
+}
+.food_title {
+  font-size: 1.5em;
+  color: chocolate;
+  text-transform: capitalize;
+}
+.food_title p {
+  font-size: 12px;
+  color: orange;
+}
 .cuisines {
   font-size: 10px;
-  color: #8D8C80;
+  color: #8D9096;
 }
