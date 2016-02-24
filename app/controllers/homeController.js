@@ -49,6 +49,7 @@ myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'sear
         $scope.map.fitBounds(bounds);
         document.getElementById('map_canvas').style.display = "block";
         document.querySelector('.error').style.display = "none";
+        document.querySelector('.filterContents').style.display = "block";
         if ($scope.resultList.length == 1) {
           $scope.map.setZoom(17);
         }
