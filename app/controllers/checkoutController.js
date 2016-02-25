@@ -19,4 +19,7 @@ myApp.controller('checkoutController', ['$scope','$location', 'checkoutData', fu
     $scope.success = function(){
       $location.path('/success');
     }
+    $scope.delivery={
+      name: 'delivery'
+    }
 }]);

@@ -1,3 +1,28 @@
 <div class="success">
-  You have been successfully placed your order . .. That was a demo. :)
+  <div class="payment">
+    <form action="" method="post" class="basic-grey">
+      <h1>Secure Checkout
+        <span>Select delivery address and payment type.</span>
+    </h1>
+      <label>
+        <span>Your Name :</span>
+        <input id="name" type="text" name="name" placeholder="Your Full Name" />
+      </label>
+      <label>
+        <span>Address :</span>
+        <textarea id="message" name="message" placeholder="address here"></textarea>
+      </label>
+      <label>
+        <span>Payment :</span>
+        <select name="selection">
+          <option>Pay on Delivery</option>
+          <option>Pay now</option>
+        </select>
+      </label>
+      <label>
+        <span>&nbsp;</span>
+        <input type="button" class="button" value="Place order now" />
+      </label>
+    </form>
+  </div>
 </div>
