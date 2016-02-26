@@ -2,7 +2,7 @@
   <div class="allContainer">
     <div class="success_heading">
       <div class="backButton">
-        <a href="/result">Back to resturant</a>
+        <a href="/checkout">Back to resturant</a>
       </div>
       <div class="heading">
         <h3>Secure Checkout</h3>
@@ -23,7 +23,7 @@
         </li>
       </ul>
     </div>
-    <div class="delivery_address">
+    <div class="delivery_address" ng-show="showVariable">
       <div class="address_title">Your delivery address</h2>
         <ul>
           <li>
@@ -37,7 +37,7 @@
         </ul>
       </div>
 
-      <div class="payment">
+      <div class="payment" ng-show="showVariable">
         <div class="total">
           Total : {{ total }}
         </div>
