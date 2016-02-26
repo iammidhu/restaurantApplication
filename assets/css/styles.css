@@ -282,10 +282,10 @@ ul li {
   padding: 0% 0%;
 }
 .homepage {
-  background-image: url('../images/337094-zero.jpg');
+  /*background-image: url('../images/337094-zero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right bottom;*/
   height: 77.5vh;
 }
 footer {
@@ -498,14 +498,6 @@ html, body {
   color: brown;
   text-decoration: underline;
 }
-.success {
-  font-size: 17px;
-  color: cornflowerblue;
-  line-height: 20;
-  margin-left: 0;
-  margin-right: 0;
-  text-align: center;
-}
 .food {
   height: 20vh;
   padding-top: 20vh;
@@ -560,4 +552,72 @@ html, body {
 }
 .orderInfo input[type=radio]:checked {
   background-color: green;
+}
+.success {
+  width: 70%;
+  padding-left: 10vw;
+}
+.allContainer{
+  display: flex;
+  flex-direction: column;
+}
+.name{
+  flex-grow: 1;
+
+}
+.allContainer ul li{
+  list-style: none;
+  display: block;
+}
+.input_box{
+  background-color: white;
+  width: 50%;
+  padding: 1%;
+  border: 1px solid #ccc;
+}
+.input_box:active{
+  outline: none;
+
+}
+.delivery_address{
+  flex-grow: 1;
+
+}
+.payment{
+  flex-grow: 1;
+
+}
+.address_title{
+  font-size: 16px;
+}
+.form_title{
+font-size: 12px;
+}
+.payment_heading{
+  font-size: 16px;
+}
+.payment_type{
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+.payment_type .types{
+  height: 50%;
+  padding: 1vh;
+  border: 1px solid #ccc;
+  margin-bottom: 2vh;
+}
+.orderNow{
+  margin: 0;
+  padding: 2%;
+}
+.success_heading{
+  flex-grow: 1;
+}
+.success_heading p{
+
+  font-size: 9px;
+}
+.success_heading h3{
+  margin:1px;
 }
