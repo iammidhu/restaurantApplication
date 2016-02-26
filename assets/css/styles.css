@@ -557,67 +557,79 @@ html, body {
   width: 70%;
   padding-left: 10vw;
 }
-.allContainer{
+.allContainer {
   display: flex;
   flex-direction: column;
 }
-.name{
+.name {
   flex-grow: 1;
-
 }
-.allContainer ul li{
+.allContainer ul li {
   list-style: none;
   display: block;
 }
-.input_box{
+.input_box {
   background-color: white;
   width: 50%;
   padding: 1%;
   border: 1px solid #ccc;
 }
-.input_box:active{
+.input_box:active {
   outline: none;
-
 }
-.delivery_address{
+.delivery_address {
   flex-grow: 1;
-
 }
-.payment{
+.payment {
   flex-grow: 1;
-
+  display: flex;
+  flex-direction: row;
 }
-.address_title{
+.address_title {
   font-size: 16px;
+  color: brown;
 }
-.form_title{
-font-size: 12px;
+.form_title {
+  font-size: 12px;
 }
-.payment_heading{
-  font-size: 16px;
-}
-.payment_type{
+.payment_type {
   display: flex;
   flex-direction: column;
   padding: 1%;
 }
-.payment_type .types{
+.payment_type .types {
   height: 50%;
   padding: 1vh;
   border: 1px solid #ccc;
   margin-bottom: 2vh;
 }
-.orderNow{
+.orderNow {
   margin: 0;
-  padding: 2%;
+  padding: 1.5vh;
 }
-.success_heading{
+.success_heading {
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
+}
+.success_heading p {
+  font-size: 9px;
+  text-align: center;
+}
+.success_heading h3 {
+  margin: 5px;
+  text-align: center;
+}
+.backbutton2 {
   flex-grow: 1;
 }
-.success_heading p{
-
-  font-size: 9px;
+.heading {
+  flex-grow: 2;
 }
-.success_heading h3{
-  margin:1px;
+.payment_container {
+  width: 70%;
+}
+.total {
+  width: 20%;
+  margin-left: 1px;
 }

@@ -1,10 +1,15 @@
 <div class="success">
   <div class="allContainer">
     <div class="success_heading">
-      <h3>Secure Checkout</h3>
-      <p>
-        Select delivery address and payment type
-      </p>
+      <div class="backButton">
+        <a href="/result">Back to resturant</a>
+      </div>
+      <div class="heading">
+        <h3>Secure Checkout</h3>
+        <p>
+          Select delivery address and payment type
+        </p>
+      </div>
     </div>
     <div class="name">
       <ul>
@@ -31,16 +36,22 @@
           </li>
         </ul>
       </div>
+
       <div class="payment">
-        <div class="payment_heading">
-          Choose how to pay
+        <div class="total">
+          Total : {{ total }}
         </div>
-        <div class="payment_type">
-          <div class="types">
-            pay now
+        <div class="payment_container">
+          <div class="address_title">
+            Choose how to pay
           </div>
-          <div class="types">
-            pay on delivery
+          <div class="payment_type">
+            <div class="types">
+              pay now
+            </div>
+            <div class="types">
+              pay on delivery
+            </div>
           </div>
         </div>
       </div>
