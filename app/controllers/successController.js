@@ -7,8 +7,8 @@ myApp.controller('successController', ['$scope', '$location', 'finalData', funct
   $scope.payment_types = ['pay now', 'pay on delivery'];
   $scope.delivery_type = orderData.delivery.name;
   $scope.showVariable = true;
-$scope.activeItem = "";
-  $scope.payment = function(item){
+  $scope.activeItem = "";
+  $scope.payment = function(item) {
     $scope.activeItem = item;
   };
   if ($scope.delivery_type == 'pickup') {
