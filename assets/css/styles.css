@@ -290,6 +290,7 @@ ul li {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right bottom;
+  height: 77.5vh;
 }
 footer {
   width: 100%;
