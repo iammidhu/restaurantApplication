@@ -494,6 +494,20 @@ html, body {
   background-size: 20px 20px;
   background-position: 0px 0px;
 }
+.backtoOrder {
+  padding: 20px;
+  background: url('../images/arrow.png') no-repeat;
+  background-size: 20px 20px;
+  background-position: 5px 20px;
+}
+.backtoOrder a {
+  text-decoration: none;
+  color: brown;
+}
+.backtoOrder a:hover {
+  color: brown;
+  text-decoration: underline;
+}
 .backButton a {
   text-decoration: none;
   color: brown;
@@ -558,18 +572,48 @@ html, body {
 .orderInfo input[type=radio]:checked {
   background-color: green;
 }
+
+/* success page styles*/
+
 .success {
-  width: 70%;
-  padding-left: 10vw;
+  width: 100%;
+  height: 67vh;
+  display: flex;
+  flex-direction: row;
 }
-.allContainer {
+.success_heading {
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
+  border: 1px solid #EBC7C7;
+  border-right: 0;
+  border-left: 0;
+}
+.success_heading p {
+  font-size: 9px;
+}
+.success_heading h3 {
+  margin: 5px;
+}
+.container1 {
+  margin-left: 10px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  border-right: 1px solid #DEC1C1;
+}
+.container2 {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin-right: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .name {
-  flex-grow: 1;
+  display: block;
+  padding: 40px;
 }
-.allContainer ul li {
+.container1 ul li, .container2 ul li {
   list-style: none;
   display: block;
   margin-bottom: 10px;
@@ -584,12 +628,13 @@ html, body {
   outline: none;
 }
 .delivery_address {
-  flex-grow: 1;
+  display: block;
+  padding: 40px;
 }
 .payment {
-  flex-grow: 1;
   display: flex;
   flex-direction: row;
+  padding: 50px;
 }
 .address_title {
   font-size: 16px;
@@ -597,7 +642,7 @@ html, body {
   margin-left: 40px;
 }
 .form_title {
-  font-size: 12px;
+  font-size: 14px;
 }
 .payment_type {
   display: flex;
@@ -609,25 +654,12 @@ html, body {
   border: 1px solid #ccc;
   margin-bottom: 5px;
 }
+.totalContainer {
+  padding: 2px;
+}
 .orderNow {
   margin: 0;
   padding: 1.5vh;
-}
-.success_heading {
-  display: flex;
-  flex-direction: row;
-  padding: 1%;
-}
-.success_heading p {
-  font-size: 9px;
-  text-align: center;
-}
-.success_heading h3 {
-  margin: 5px;
-  text-align: center;
-}
-.backbutton2 {
-  flex-grow: 1;
 }
 .heading {
   flex-grow: 2;
@@ -636,8 +668,9 @@ html, body {
   width: 70%;
 }
 .total {
-  width: 20%;
-  margin-left: 40px;
+  padding: 10px;
+  text-align: center;
+  background-color: #E9E7E1;
 }
 .active_pay {
   background-color: #54DC54;
