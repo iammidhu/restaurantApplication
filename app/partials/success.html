@@ -2,7 +2,7 @@
   <div class="allContainer">
     <div class="success_heading">
       <div class="backButton">
-        <a href="/checkout">Back to resturant</a>
+        <a href="/checkout">Back to order summary</a>
       </div>
       <div class="heading">
         <h3>Secure Checkout</h3>
@@ -24,7 +24,7 @@
       </ul>
     </div>
     <div class="delivery_address" ng-show="showVariable">
-      <div class="address_title">Your delivery address</h2>
+      <div class="address_title">Your delivery address</div>
         <ul>
           <li>
             <div class="form_title">Flat No. / House No.</div>
@@ -37,7 +37,7 @@
         </ul>
       </div>
 
-      <div class="payment" ng-show="showVariable">
+      <div class="payment">
         <div class="total">
           Total : {{ total }}
         </div>
@@ -46,12 +46,11 @@
             Choose how to pay
           </div>
           <div class="payment_type">
-            <div class="types">
-              pay now
-            </div>
-            <div class="types">
-              pay on delivery
-            </div>
+            <ul>
+              <li class="types" ng-repeat="item in payment_types track by $index" ng-click="payment(item)" ng-class="{active_pay : activeItem === item}">
+                {{item}}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
