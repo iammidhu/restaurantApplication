@@ -167,6 +167,7 @@ ul li {
   height: 65vh;
   padding-left: 2vh;
   background-image: url("../images/Translucent_50_percent_white.png");
+  border-top: 5px solid darkgreen;
 }
 .review ul {
   height: 200px;
@@ -383,7 +384,7 @@ html, body {
 .totalAmount {
   width: 100%;
   text-align: right;
-  font-size: 15px;
+  font-size: 1.3em;
 }
 .totalAmount .amount {
   margin-left: 5%;
@@ -536,9 +537,10 @@ html, body {
   height: 65vh;
   padding: 2vh;
   background-image: url("../images/Translucent_50_percent_white.png");
+  border-top: 5px solid darkgreen;
 }
 .orderInfoHeading {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.1;
   font-weight: 700;
   color: #222;
