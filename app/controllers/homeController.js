@@ -5,6 +5,10 @@ myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'sear
     center: new google.maps.LatLng(25, 80),
     mapTypeId: google.maps.MapTypeId.TERRAIN
   };
+  $scope.showfilters = function(){
+    document.querySelector('.filter ul').style.height = "100%";
+    document.querySelector('.filter ul').style.transition = "all 1s ease";
+  };
   $scope.markers = [];
   $resultList = [];
   var cuisine = [

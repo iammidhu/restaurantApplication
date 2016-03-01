@@ -7,7 +7,7 @@
   <div class="resultContainer">
     <div class="filterContents">
       <div class="filterTitle">
-        Cuisines
+        Cuisines <span ng-click="showfilters()"><i class="fa fa-chevron-down"></i></span> 
       </div>
       <div class="filter">
         <ul class="filter_item">
@@ -20,7 +20,7 @@
     </div>
     <div class="search-result-list">
       <ul>
-        <li ng-repeat="data in resultList | filterProvider: filterData track by $index">
+        <li ng-repeat="data in resultList | cuisineFilter: filterData track by $index">
           <h3 class="hotelTitle"><a ng-click="nextScreen(data)">{{data.title}}</a></h3>
           <p class="cuisines">
             {{data.Cuisines}}
