@@ -1,4 +1,4 @@
-myApp.controller('checkoutController', ['$scope', '$location', 'checkoutData', 'finalData', function($scope, $location, checkoutData, finalData) {
+restaurantApp.controller('checkoutController', ['$scope', '$location', 'checkoutData', 'finalData', function($scope, $location, checkoutData, finalData) {
   //Here the summary of the order is displayed along with a select payment option.
   var next = checkoutData;
   var data = next.get();
@@ -11,7 +11,7 @@ myApp.controller('checkoutController', ['$scope', '$location', 'checkoutData', '
       $scope.isDisabled = true;
     }
   }
-  $scope.change = function(index, changeCount, $event) {
+  $scope.changeItem = function(index, changeCount, $event) {
     $scope.info.total -= $scope.info.review[index].total;
     $scope.info.review[index].total = changeCount * $scope.info.review[index].pricePerItem;
     $scope.info.total += $scope.info.review[index].total;

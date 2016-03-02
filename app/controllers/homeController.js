@@ -1,4 +1,4 @@
-myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'searchQuery', 'createMarker', 'sharedData', function($scope, $location, $routeParams, searchQuery, createMarker, sharedData) {
+restaurantApp.controller('homeController', ['$scope', '$location', '$routeParams', 'searchQuery', 'createMarker', 'sharedData', function($scope, $location, $routeParams, searchQuery, createMarker, sharedData) {
 
     var mapOptions = {
         zoom: 17,

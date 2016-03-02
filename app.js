@@ -1,7 +1,7 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var restaurantApp = angular.module('restaurantApp', ['ngRoute']);
 
 
-myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+restaurantApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
     when('/', {
         templateUrl: 'app/partials/search.html',

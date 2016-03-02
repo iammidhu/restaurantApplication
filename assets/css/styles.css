@@ -651,6 +651,7 @@ html, body {
   padding: 1vh;
   border: 1px solid #ccc;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 .totalContainer {
   padding: 2px;
