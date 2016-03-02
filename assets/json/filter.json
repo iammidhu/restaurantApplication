@@ -1,0 +1,19 @@
+{
+  "cuisines":
+  [
+    "North Indian",
+    "South Indian",
+    "Biriyani",
+    "Chineese",
+    "Desserts",
+    "Snacks",
+    "Cakes",
+    "Italian",
+    "Sandwiches",
+    "Pizza",
+    "Salads",
+    "Burgers",
+    "Juice",
+    "Beverages"
+  ]
+}

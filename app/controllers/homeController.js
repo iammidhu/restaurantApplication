@@ -1,4 +1,4 @@
-myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'searchQuery', 'createMarker', 'sharedData', function($scope, $location, $routeParams, searchQuery, createMarker, sharedData) {
+myApp.controller('homeController', ['$scope', '$http', '$location', '$routeParams', 'searchQuery', 'createMarker', 'sharedData', function($scope, $http, $location, $routeParams, searchQuery, createMarker, sharedData) {
 
   var mapOptions = {
     zoom: 17,
@@ -8,24 +8,10 @@ myApp.controller('homeController', ['$scope', '$location', '$routeParams', 'sear
   $scope.showfilters = false;
   $scope.markers = [];
   $resultList = [];
-  var cuisine = [
-    "North Indian",
-    "South Indian",
-    "Biriyani",
-    "Chineese",
-    "Desserts",
-    "Snacks",
-    "Cakes",
-    "Italian",
-    "Sandwiches",
-    "Pizza",
-    "Salads",
-    "Burgers",
-    "Juice",
-    "Beverages",
-  ];
+  $http.get('assets/json/filter.json').success(function(response){
+      $scope.filters = response.cuisines;
+  });
   $scope.filterData = [];
-  $scope.filters = cuisine;
   $scope.filterCuisine = function(filter) {
 
     if ($scope.filterData.indexOf(filter) > -1) {
