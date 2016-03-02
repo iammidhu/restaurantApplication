@@ -1,4 +1,4 @@
-var restaurantApp = angular.module('restaurantApp', ['ngRoute']);
+var restaurantApp = angular.module('restaurantApp', ['ngRoute', 'ngAnimate']);
 
 
 restaurantApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
