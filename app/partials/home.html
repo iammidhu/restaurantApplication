@@ -7,10 +7,10 @@
   <div class="resultContainer">
     <div class="filterContents">
       <div class="filterTitle">
-        Cuisines <span ng-click="showfilters()"><i class="fa fa-chevron-down"></i></span> 
+        Cuisines <span ng-click="showfilters= !showfilters"><i ng-class='{"fa fa-chevron-down": showfilters, "fa fa-chevron-right": !showfilters}'></i></span>
       </div>
       <div class="filter">
-        <ul class="filter_item">
+        <ul class="filter_item" ng-show="showfilters">
           <li ng-repeat="cuisine in filters">
             <input type="checkbox" id="cuisine" ng-click="filterCuisine(cuisine)">
             <label for="cuisine0">{{cuisine}}</label>

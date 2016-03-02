@@ -173,7 +173,7 @@ ul li {
 }
 .review {
   width: 30%;
-  height: 65vh;
+  height: 60vh;
   padding-left: 2vh;
   background-image: url("../images/Translucent_50_percent_white.png");
 }
@@ -526,7 +526,7 @@ html, body {
 }
 .filterTitle {
   margin-top: 40px;
-  font-size: 15px;
+  font-size: 16px;
   margin-left: 10px;
   color: #000;
 }
@@ -534,12 +534,10 @@ html, body {
   list-style: none;
   padding: 0;
   margin: 0;
-  height: 0;
-  overflow: hidden;
-
 }
 .filter_item {
   font-size: 12px;
+  transition: 0.01s linear height;
 }
 .filter_item li {
   padding: 1vh 0 1vh 0;
